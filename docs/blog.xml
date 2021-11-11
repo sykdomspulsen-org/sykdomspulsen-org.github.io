@@ -9,19 +9,12 @@
     <generator>Distill</generator>
     <lastBuildDate>Thu, 11 Nov 2021 00:00:00 +0000</lastBuildDate>
     <item>
-      <title>hello</title>
-      <dc:creator>Richard Aubrey White</dc:creator>
-      <link>https://docs.sykdomspulsen.no/posts/2021-11-11-hello</link>
-      <description>A short description of the post.</description>
-      <guid>https://docs.sykdomspulsen.no/posts/2021-11-11-hello</guid>
-      <pubDate>Thu, 11 Nov 2021 00:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>Welcome to Sykdomspulsen</title>
       <dc:creator>Richard Aubrey White</dc:creator>
-      <link>https://docs.sykdomspulsen.no/posts/welcome</link>
-      <description>Welcome!</description>
-      <guid>https://docs.sykdomspulsen.no/posts/welcome</guid>
+      <link>https://docs.sykdomspulsen.no/posts/2021-11-11-welcome</link>
+      <description>Sykdomspulsen is a real time analysis and disease surveillance system designed
+and developed at the Norwegian Institute of Public Health (NIPH/FHI).</description>
+      <guid>https://docs.sykdomspulsen.no/posts/2021-11-11-welcome</guid>
       <pubDate>Thu, 11 Nov 2021 00:00:00 +0000</pubDate>
     </item>
   </channel>

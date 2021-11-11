@@ -1,27 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" version="1.0">
   <url>
-    <loc>https://docs.sykdomspulsen.no/about.html</loc>
-    <lastmod>2021-11-01T11:36:02+01:00</lastmod>
-  </url>
-  <url>
     <loc>https://docs.sykdomspulsen.no/blog.html</loc>
-    <lastmod>2021-11-11T07:31:32+01:00</lastmod>
+    <lastmod>2021-11-11T07:40:24+01:00</lastmod>
   </url>
   <url>
     <loc>https://docs.sykdomspulsen.no/</loc>
     <lastmod>2021-11-11T07:23:36+01:00</lastmod>
   </url>
   <url>
+    <loc>https://docs.sykdomspulsen.no/splverse.html</loc>
+    <lastmod>2021-11-11T08:12:25+01:00</lastmod>
+  </url>
+  <url>
     <loc>https://docs.sykdomspulsen.no/test.html</loc>
     <lastmod>2021-11-01T12:01:00+01:00</lastmod>
   </url>
   <url>
-    <loc>https://docs.sykdomspulsen.no/posts/2021-11-11-hello/</loc>
-    <lastmod>2021-11-11T07:39:11+01:00</lastmod>
-  </url>
-  <url>
-    <loc>https://docs.sykdomspulsen.no/posts/welcome/</loc>
-    <lastmod>2021-11-11T07:38:28+01:00</lastmod>
+    <loc>https://docs.sykdomspulsen.no/posts/2021-11-11-welcome/</loc>
+    <lastmod>2021-11-11T07:44:11+01:00</lastmod>
   </url>
 </urlset>

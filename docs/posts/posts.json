@@ -1,25 +1,8 @@
 [
   {
-    "path": "posts/2021-11-11-hello/",
-    "title": "hello",
-    "description": "A short description of the post.",
-    "author": [
-      {
-        "name": "Richard Aubrey White",
-        "url": "https://www.fhi.no"
-      }
-    ],
-    "date": "2021-11-11",
-    "categories": [],
-    "contents": "\nDistill is a publication format for scientific and technical writing, native to the web.\nLearn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n",
-    "preview": {},
-    "last_modified": "2021-11-11T07:39:11+01:00",
-    "input_file": {}
-  },
-  {
-    "path": "posts/welcome/",
+    "path": "posts/2021-11-11-welcome/",
     "title": "Welcome to Sykdomspulsen",
-    "description": "Welcome!",
+    "description": "Sykdomspulsen is a real time analysis and disease surveillance system designed\nand developed at the Norwegian Institute of Public Health (NIPH/FHI).",
     "author": [
       {
         "name": "Richard Aubrey White",
@@ -28,9 +11,9 @@
     ],
     "date": "2021-11-11",
     "categories": [],
-    "contents": "\nTest\n\n\n\n",
+    "contents": "\nThis website has been designed with the purpose of documenting the Sykdomspulsen project in such a way that anyone can duplicate our infrastructure and run their own version of Sykdomspulsen.\n\n\n\n",
     "preview": {},
-    "last_modified": "2021-11-11T07:38:28+01:00",
+    "last_modified": "2021-11-11T07:44:11+01:00",
     "input_file": {}
   }
 ]
