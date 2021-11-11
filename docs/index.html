@@ -8,6 +8,21 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <style type="text/css">body {font-family: 'Roboto Mono', serif;}</style>
+
+    <style>
+      @media screen and (min-width: 768px) {
+        .container {
+          width: 768px;
+        }
+      }
+
+      body {
+        background-color: #f5e9dd;
+      }
+    </style>
+
     <title>Sykdomspulsen</title>
 
     
@@ -652,121 +667,133 @@
           <!--radix_placeholder_site_before_body-->
           <!--/radix_placeholder_site_before_body-->
     
-    <div class="container min-vh-100">
-      <div class="row min-vh-100 justify-content-center align-items-center">
-        <div class="col-12 text-center">
-          <img src=sykdomspulsen.png style="height:10rem" class="rounded-circle">
-          <div class="mt-3">
-            <h1>Sykdomspulsen</h1>
-          </div>
-          <div class="row justify-content-center align-items-center">
-            <div class="col-6 mt-3 text-center d-none d-sm-block">
-              <div id="sykdomspulsen" class="section level2">
-              <h2>Sykdomspulsen</h2>
-              <p>Sykdomspulsen is a real time analysis and diseases surveillance system designed and developed at the Norwegian Institute of Public Health (NIPH/FHI).</p>
-              <p>«Data» is not useful by itself. Data must be cleaned, analysed, and the results delivered to stakeholders. An effective outbreak response requires this in near real-time.</p>
-              <p>Sykdomspulsen’s goal is to achieve this.</p>
-              <ul>
-              <li>We receive data from more than 15 data sources</li>
-              <li>2 000 000 000+ rows of data og results (1TB)</li>
-              <li>1000 database tables</li>
-              <li>500 000+ analyses per day</li>
-              <li>500+ automatic reports per day</li>
-              </ul>
-              </div>
-              <div id="sykdomspulsen-core" class="section level2">
-              <h2>Sykdomspulsen core</h2>
-              <p>Sykdomspulsen Core is the free and open-source backbone of Sykdomspulsen Analytics.</p>
-              </div>
-              <div id="splverse" class="section level2">
-              <h2>splverse</h2>
-              <p><strong>splverse</strong> is a number of R packages that have been developed by the Sykdomspulsen team to help with infectious diseases surveillance.</p>
-              </div>
-              <div id="sykdomspulsen-for-kommunehelsetjenesten" class="section level2">
-              <h2>Sykdomspulsen for kommunehelsetjenesten</h2>
-              <p>Dersom du er kommuneleger eller statsforvalter og leter etter nettsiden Sykdomspulsen for kommunehelsetjenesten må du klikke <a href="https://spuls.fhi.no/">her</a></p>
-              </div>
-            </div>
-            <div class="col-11 mt-3 text-center d-block d-sm-none">
-              <div id="sykdomspulsen" class="section level2">
-              <h2>Sykdomspulsen</h2>
-              <p>Sykdomspulsen is a real time analysis and diseases surveillance system designed and developed at the Norwegian Institute of Public Health (NIPH/FHI).</p>
-              <p>«Data» is not useful by itself. Data must be cleaned, analysed, and the results delivered to stakeholders. An effective outbreak response requires this in near real-time.</p>
-              <p>Sykdomspulsen’s goal is to achieve this.</p>
-              <ul>
-              <li>We receive data from more than 15 data sources</li>
-              <li>2 000 000 000+ rows of data og results (1TB)</li>
-              <li>1000 database tables</li>
-              <li>500 000+ analyses per day</li>
-              <li>500+ automatic reports per day</li>
-              </ul>
-              </div>
-              <div id="sykdomspulsen-core" class="section level2">
-              <h2>Sykdomspulsen core</h2>
-              <p>Sykdomspulsen Core is the free and open-source backbone of Sykdomspulsen Analytics.</p>
-              </div>
-              <div id="splverse" class="section level2">
-              <h2>splverse</h2>
-              <p><strong>splverse</strong> is a number of R packages that have been developed by the Sykdomspulsen team to help with infectious diseases surveillance.</p>
-              </div>
-              <div id="sykdomspulsen-for-kommunehelsetjenesten" class="section level2">
-              <h2>Sykdomspulsen for kommunehelsetjenesten</h2>
-              <p>Dersom du er kommuneleger eller statsforvalter og leter etter nettsiden Sykdomspulsen for kommunehelsetjenesten må du klikke <a href="https://spuls.fhi.no/">her</a></p>
-              </div>
-            </div>
-          </div>
-
-          <hr style="width:60%;"/>
-
-          <div class="row justify-content-center align-items-center">
-            <div class="col-8 text-center d-none d-sm-block">
-              <ul class="list-inline">
-                                <li class="list-inline-item">
-                  <a href=https://github.com/sykdomspulsen-org/>
-                    <button type="button" class="btn btn-outline-dark mb-2">
-                      GitHub
-                    </button>
-                  </a>
-                </li>
-                                <li class="list-inline-item">
-                  <a href=https://spuls.fhi.no>
-                    <button type="button" class="btn btn-outline-dark mb-2">
-                      Kommunehelsetjenesten
-                    </button>
-                  </a>
-                </li>
-                                <li class="list-inline-item">
-                  <a href=https://www.fhi.no/hn/statistikk/sykdomspulsen/>
-                    <button type="button" class="btn btn-outline-dark mb-2">
-                      fhi.no
-                    </button>
-                  </a>
-                </li>
-                              </ul>
-            </div>
-          </div>
-
-          <div class="row justify-content-center align-items-center">
-            <div class="col-8 m-1 text-center d-block d-sm-none">
-              <div class="list-group">
-                                <a href=https://github.com/sykdomspulsen-org/>
-                  <button type="button" class="list-group-item list-group-item-action my-1 rounded">
+    <div class="container d-none d-lg-block d-xl-block">
+      <div class="row mt-5">
+        <div class="col-7 mt-5">
+          <h1>Sykdomspulsen</h1>
+          <hr style="max-width: 200px; margin-left:0;" style="width:60%;"/>
+          <div class="my-3" id="icon-list">
+            <ul class="list-inline">
+                            <li class="list-inline-item">
+                <a href=https://github.com/sykdomspulsen-org/>
+                  <button type="button" class="btn btn-outline-dark mb-2">
                     GitHub
                   </button>
                 </a>
-                                <a href=https://spuls.fhi.no>
-                  <button type="button" class="list-group-item list-group-item-action my-1 rounded">
-                    Kommunehelsetjenesten
+              </li>
+                            <li class="list-inline-item">
+                <a href=https://spuls.fhi.no>
+                  <button type="button" class="btn btn-outline-dark mb-2">
+                    For kommunehelsetjenesten
                   </button>
                 </a>
-                                <a href=https://www.fhi.no/hn/statistikk/sykdomspulsen/>
-                  <button type="button" class="list-group-item list-group-item-action my-1 rounded">
+              </li>
+                            <li class="list-inline-item">
+                <a href=https://www.fhi.no/hn/statistikk/sykdomspulsen/>
+                  <button type="button" class="btn btn-outline-dark mb-2">
                     fhi.no
                   </button>
                 </a>
-                              </div>
-            </div>
+              </li>
+                          </ul>
           </div>
+        </div>
+
+        <div class="col mr-4 mt-5">
+          <img src="sykdomspulsen.png" style="height:15rem" class="rounded float-right">
+        </div>
+      </div>
+      <div class="row mb-5">
+        <div class="col">
+          <div id="sykdomspulsen" class="section level2">
+          <h2>Sykdomspulsen</h2>
+          <p>Sykdomspulsen is a real time analysis and diseases surveillance system designed and developed at the Norwegian Institute of Public Health (NIPH/FHI).</p>
+          <p>«Data» is not useful by itself. Data must be cleaned, analysed, and the results delivered to stakeholders. An effective outbreak response requires this in near real-time.</p>
+          <p>Sykdomspulsen’s goal is to achieve this.</p>
+          <ul>
+          <li>We receive data from more than 15 data sources every day</li>
+          <li>2 000 000 000+ rows of data and results (1TB)</li>
+          <li>1000+ database tables</li>
+          <li>500 000+ analyses per day</li>
+          <li>500+ automatic reports per day</li>
+          </ul>
+          </div>
+          <div id="sykdomspulsen-core" class="section level2">
+          <h2>Sykdomspulsen core</h2>
+          <p>Sykdomspulsen Core is the free and open-source backbone of Sykdomspulsen Analytics.</p>
+          </div>
+          <div id="splverse" class="section level2">
+          <h2>splverse</h2>
+          <p><strong>splverse</strong> is a number of R packages that have been developed by the Sykdomspulsen team to help with infectious diseases surveillance.</p>
+          </div>
+          <div id="sykdomspulsen-for-kommunehelsetjenesten" class="section level2">
+          <h2>Sykdomspulsen for kommunehelsetjenesten</h2>
+          <p>Dersom du er kommuneleger eller statsforvalter og leter etter nettsiden Sykdomspulsen for kommunehelsetjenesten må du klikke <a href="https://spuls.fhi.no/">her</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container d-block d-lg-none d-xl-none">
+      <div class="d-flex flex-row justify-content-center">
+        <div class="d-flex flex-col">
+          <div class="mx-auto">
+            <div class="p-3 mt-3 text-center">
+              <img src="sykdomspulsen.png" style="height:15rem" class="rounded">
+            </div>
+            <div class="p-2 text-center">
+              <h1>Sykdomspulsen</h1>
+            </div>
+            <hr style="width:60%;"/>
+
+            <div class="row justify-content-center align-items-center">
+              <div class="col-8 p-1 text-center">
+                <div class="list-group">
+                                    <a href=https://github.com/sykdomspulsen-org/>
+                    <button type="button" class="list-group-item list-group-item-action my-1 rounded" style="background-color: #f5e9dd; color: black;border-color: black;">
+                      GitHub
+                    </button>
+                  </a>
+                                    <a href=https://spuls.fhi.no>
+                    <button type="button" class="list-group-item list-group-item-action my-1 rounded" style="background-color: #f5e9dd; color: black;border-color: black;">
+                      For kommunehelsetjenesten
+                    </button>
+                  </a>
+                                    <a href=https://www.fhi.no/hn/statistikk/sykdomspulsen/>
+                    <button type="button" class="list-group-item list-group-item-action my-1 rounded" style="background-color: #f5e9dd; color: black;border-color: black;">
+                      fhi.no
+                    </button>
+                  </a>
+                                  </div>
+              </div>
+            </div>
+            <div class="mt-4 mb-5 mx-2">
+              <div id="sykdomspulsen" class="section level2">
+              <h2>Sykdomspulsen</h2>
+              <p>Sykdomspulsen is a real time analysis and diseases surveillance system designed and developed at the Norwegian Institute of Public Health (NIPH/FHI).</p>
+              <p>«Data» is not useful by itself. Data must be cleaned, analysed, and the results delivered to stakeholders. An effective outbreak response requires this in near real-time.</p>
+              <p>Sykdomspulsen’s goal is to achieve this.</p>
+              <ul>
+              <li>We receive data from more than 15 data sources every day</li>
+              <li>2 000 000 000+ rows of data and results (1TB)</li>
+              <li>1000+ database tables</li>
+              <li>500 000+ analyses per day</li>
+              <li>500+ automatic reports per day</li>
+              </ul>
+              </div>
+              <div id="sykdomspulsen-core" class="section level2">
+              <h2>Sykdomspulsen core</h2>
+              <p>Sykdomspulsen Core is the free and open-source backbone of Sykdomspulsen Analytics.</p>
+              </div>
+              <div id="splverse" class="section level2">
+              <h2>splverse</h2>
+              <p><strong>splverse</strong> is a number of R packages that have been developed by the Sykdomspulsen team to help with infectious diseases surveillance.</p>
+              </div>
+              <div id="sykdomspulsen-for-kommunehelsetjenesten" class="section level2">
+              <h2>Sykdomspulsen for kommunehelsetjenesten</h2>
+              <p>Dersom du er kommuneleger eller statsforvalter og leter etter nettsiden Sykdomspulsen for kommunehelsetjenesten må du klikke <a href="https://spuls.fhi.no/">her</a></p>
+              </div>
+            </div>
         </div>
       </div>
     </div>
