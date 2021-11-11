@@ -6,14 +6,14 @@
       "description": "Some additional details about the blog",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2021-11-11T07:23:39+01:00"
+      "last_modified": "2021-11-11T07:25:54+01:00"
     },
     {
       "path": "blog.html",
       "title": "Blog",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2021-11-11T07:23:39+01:00"
+      "last_modified": "2021-11-11T07:25:55+01:00"
     },
     {
       "path": "index.html",
@@ -21,14 +21,14 @@
       "description": "Sykdomspulsen is a real time analysis and disease surveillance system designed and developed at the Norwegian Institute of Public Health (NIPH/FHI).\n",
       "author": [],
       "contents": "\n«Data» is not useful by itself. Data must be cleaned, analysed, and the results delivered to stakeholders.\nAn effective outbreak response requires this in near real-time.\nSykdomspulsen’s goal is to achieve this.\nQuick stats\nWe receive data from more than 15 data sources every day\n2 000 000 000+ rows of data and results (1TB)\n1000+ database tables\n500 000+ analyses per day\n500+ automatic reports per day\nSykdomspulsen core\nSykdomspulsen Core is the free and open-source backbone of Sykdomspulsen.\nSykdomspulsen Core is a standalone R package, which means it is easy for other teams to build up their own surveillance infrastructure based on Sykdomspulsen Core.\nsplverse\nsplverse is a number of R packages that have been developed by the Sykdomspulsen team to help with infectious diseases surveillance.\n\n\n\n",
-      "last_modified": "2021-11-11T07:23:40+01:00"
+      "last_modified": "2021-11-11T07:25:55+01:00"
     },
     {
       "path": "test.html",
       "title": "Tobi Burns",
       "author": [],
       "contents": "\n\n          \n          \n          Sykdomspulsen\n          \n          \n          Home\n          Blog\n          About\n          \n          \n          \n          ☰\n          \n          \n      \n        \n          \n            Tobi Burns\n          \n          \n            \n              I am a classically trained data scientist living in the San Francisco Bay Area. Currently I work on the Oculus team at Facebook. I love talking about baseball, true crime podcasts, and causal inference.\n            \n            \n              I am a classically trained data scientist living in the San Francisco Bay Area. Currently I work on the Oculus team at Facebook. I love talking about baseball, true crime podcasts, and causal inference.\n            \n          \n\n          \n            \n              \n                  \n                    \n                      LinkedIn\n                    \n                  \n                \n                                \n                  \n                    \n                      Twitter\n                    \n                  \n                \n                                \n                  \n                    \n                      GitHub\n                    \n                  \n                \n                                \n                  \n                    \n                      Email\n                    \n                  \n                \n                              \n          \n\n          \n            \n              \n                                \n                  \n                    LinkedIn\n                  \n                \n                                \n                  \n                    Twitter\n                  \n                \n                                \n                  \n                    GitHub\n                  \n                \n                                \n                  \n                    Email\n                  \n                \n                              \n            \n          \n        \n      \n    \n\n    \n    \n    ",
-      "last_modified": "2021-11-11T07:23:40+01:00"
+      "last_modified": "2021-11-11T07:25:55+01:00"
     }
   ],
   "collections": ["posts/posts.json"]
