@@ -1,1 +1,36 @@
-[]
+[
+  {
+    "path": "posts/2021-11-11-hello/",
+    "title": "hello",
+    "description": "A short description of the post.",
+    "author": [
+      {
+        "name": "Richard Aubrey White",
+        "url": "https://www.fhi.no"
+      }
+    ],
+    "date": "2021-11-11",
+    "categories": [],
+    "contents": "\nDistill is a publication format for scientific and technical writing, native to the web.\nLearn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n",
+    "preview": {},
+    "last_modified": "2021-11-11T07:39:11+01:00",
+    "input_file": {}
+  },
+  {
+    "path": "posts/welcome/",
+    "title": "Welcome to Sykdomspulsen",
+    "description": "Welcome!",
+    "author": [
+      {
+        "name": "Richard Aubrey White",
+        "url": "https://www.fhi.no"
+      }
+    ],
+    "date": "2021-11-11",
+    "categories": [],
+    "contents": "\nTest\n\n\n\n",
+    "preview": {},
+    "last_modified": "2021-11-11T07:38:28+01:00",
+    "input_file": {}
+  }
+]
