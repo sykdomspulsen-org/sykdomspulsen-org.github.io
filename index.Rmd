@@ -55,7 +55,7 @@ see the link here to our [conference handout](./images/conference_handout.pdf)
 
 data flow in sykdomspulsen
 
-[<img src="./images/data_flow_large.PNG" width="200%" height="200%">](./images/data_flow_large.PNG)
+[<img src="./images/data_flow_large.PNG" width="100%" height="100%">](./images/data_flow_large.PNG)
 
 
 ### Sykdomspulsen core
