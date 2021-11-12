@@ -39,7 +39,7 @@ Sykdomspulsen's goal is to achieve this.
 
 see the link here to our [conference poster](./images/conference_poster.pdf)
 
-see the link here to our [conference poster](./images/conference_handout.pdf)
+see the link here to our [conference handout](./images/conference_handout.pdf)
 
 
 ### Quick stats
@@ -53,7 +53,9 @@ see the link here to our [conference poster](./images/conference_handout.pdf)
 ### Data Flow in Sykdomspulsen
 
 
-![data flow in sykdomspulsen](./images/data_flow.PNG)
+data flow in sykdomspulsen
+
+[<img src="./images/data_flow_large.PNG" width="200%" height="200%">](./images/data_flow_large.PNG)
 
 
 ### Sykdomspulsen core
