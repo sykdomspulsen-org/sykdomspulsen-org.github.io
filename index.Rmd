@@ -13,11 +13,34 @@ links:
     url: "https://spuls.fhi.no"
 ---
 
+### What IS Sykdomspulsen
+
+Sykdomspulsen is a near-real-time analysis and disease surveillance system designed
+and developed at the Norwegian Institute of Public Health (NIPH/FHI).
+
+Sykdomspulsen is a unique project that processes new data (e.g. covid-19 cases) shortly after it is available. Complex statistical analyses are automatically run for all locations in Norway, producing reports and alerting various stakeholders.
+
+This provides the health authorities the ability to make proactive strategic decisions with the most up-to-date information.
+
+
+### Analyses Delivered in _near real time_
+
+
+
 «Data» is not useful by itself. Data must be cleaned, analysed, and the results delivered to stakeholders.
 
 An effective outbreak response requires this in near real-time.
 
 Sykdomspulsen's goal is to achieve this.
+
+
+### Helse and Kvalitetsregister Conference Materials
+
+
+see the link here to our [conference poster](./images/conference_poster.pdf)
+
+see the link here to our [conference poster](./images/conference_handout.pdf)
+
 
 ### Quick stats
 
@@ -26,6 +49,12 @@ Sykdomspulsen's goal is to achieve this.
 - 1000+ database tables
 - 500 000+ analyses per day
 - 500+ automatic reports per day
+
+### Data Flow in Sykdomspulsen
+
+
+![data flow in sykdomspulsen](./images/data_flow.PNG)
+
 
 ### Sykdomspulsen core
 
