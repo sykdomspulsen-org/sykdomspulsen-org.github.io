@@ -1,0 +1,19 @@
+[
+  {
+    "path": "posts/2021-11-11-welcome/",
+    "title": "Welcome to Sykdomspulsen",
+    "description": "Sykdomspulsen is a real time analysis and disease surveillance system designed\nand developed at the Norwegian Institute of Public Health (NIPH/FHI).",
+    "author": [
+      {
+        "name": "Richard Aubrey White",
+        "url": "https://www.fhi.no"
+      }
+    ],
+    "date": "2021-11-11",
+    "categories": [],
+    "contents": "\nThis website has been designed with the purpose of documenting the Sykdomspulsen project in such a way that anyone can duplicate our infrastructure and run their own version of Sykdomspulsen.\n\n\n\n",
+    "preview": {},
+    "last_modified": "2021-11-11T07:44:11+01:00",
+    "input_file": {}
+  }
+]
