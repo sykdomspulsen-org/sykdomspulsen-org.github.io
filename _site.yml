@@ -14,6 +14,8 @@ navbar:
       href: packages.html
     - text: "Core"
       href: core-in-depth/
+    - text: "Infrastructure"
+      href: infrastructure/
     - text: "Blog"
       href: blog.html
     - icon: fab fa-github
