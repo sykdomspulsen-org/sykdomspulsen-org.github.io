@@ -1,0 +1,11 @@
+---
+title: "Packages/splverse"
+description: |
+  A set of R packages developed to help solve problems that frequently occur when performing infectious disease surveillance.
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+https://docs.sykdomspulsen.no/spldata/

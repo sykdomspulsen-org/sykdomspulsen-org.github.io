@@ -1,0 +1,19 @@
+name: "."
+title: "Sykdomspulsen"
+description: |
+  Sykdomspulsen
+base_url: https://docs.sykdomspulsen.no
+repository_url: https://github.com/sykdomspulsen-org/sykdomspulsen-org.github.io
+creative_commons: CC BY
+output_dir: "docs"
+navbar:
+  right:
+    - text: "Home"
+      href: index.html
+    - text: "Packages"
+      href: packages.html
+    - text: "Blog"
+      href: blog.html
+    - icon: fab fa-github
+      href: https://github.com/sykdomspulsen-org
+output: distill::distill_article
