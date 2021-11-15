@@ -15,8 +15,17 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-Distill is a publication format for scientific and technical writing, native to the web.
+We are at the Kvalitetsregister Konferanse today and tomorrow!
 
-Learn more about using Distill at <https://rstudio.github.io/distill>.
+Come and say hi :)
+
+Poster presentations are tomorrow 16/11/21, and you can find us at stand #23. 
+
+If you missed us, please see below a copy of the poster and handout
+
+
+see the link here to our [conference poster](./conference_poster.pdf)
+
+see the link here to our [conference handout](./conference_handout.pdf)
 
 
