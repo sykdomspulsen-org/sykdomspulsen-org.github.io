@@ -9,3 +9,9 @@ knitr::opts_chunk$set(echo = FALSE)
 ```
 
 https://docs.sykdomspulsen.no/spldata/
+
+https://docs.sykdomspulsen.no/splmaps/
+
+https://docs.sykdomspulsen.no/splstyle/
+
+https://docs.sykdomspulsen.no/spltime/
