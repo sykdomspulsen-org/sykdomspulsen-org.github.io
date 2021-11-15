@@ -1,7 +1,7 @@
 ---
-title: "we are at Kvalitetsregister Konferanse!"
+title: "We are at Kvalitetsregister Konferanse today/tomorrow!"
 description: |
-  A short description of the post.
+  Come chat to us in the poster presentation time slot
 author:
   - name: Calvin Chiang
 date: 11-15-2021
@@ -19,7 +19,7 @@ We are at the Kvalitetsregister Konferanse today and tomorrow!
 
 Come and say hi :)
 
-Poster presentations are tomorrow 16/11/21, and you can find us at stand #23. 
+Poster presentations are tomorrow (16/11/21) from 10:45 to 11:30, and you can find us at _stand #23_. 
 
 If you missed us, please see below a copy of the poster and handout
 
