@@ -1,0 +1,30 @@
+---
+title: "Team"
+description: |
+  The Sykdomspulsen team.
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+Aurora
+
+Bea
+
+Calvin
+
+Celine
+
+Chi
+
+Clémence
+
+David
+
+Gry
+
+Jonas
+
+*Richard Aubrey White* 
+

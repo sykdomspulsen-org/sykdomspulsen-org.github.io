@@ -2,7 +2,7 @@
 site: distill::distill_website
 title: "Sykdomspulsen"
 description: |
-  Sykdomspulsen is a real time analysis and disease surveillance system designed and developed at the Norwegian Institute of Public Health (NIPH/FHI).
+  Sykdomspulsen is a real-time analysis and disease surveillance system designed and developed at the Norwegian Institute of Public Health (NIPH/FHI).
 image: "sykdomspulsen.png"
 links:
   - label: GitHub
@@ -13,16 +13,13 @@ links:
     url: "https://spuls.fhi.no"
 ---
 
-### What IS Sykdomspulsen
+### What is Sykdomspulsen
 
 Sykdomspulsen is a unique project that processes new data (e.g. covid-19 cases) shortly after it is available. Complex statistical analyses are automatically run for all locations in Norway, producing reports and alerting various stakeholders.
 
 This provides the health authorities the ability to make proactive strategic decisions with the most up-to-date information.
 
-
-### Analyses Delivered in _near real time_
-
-
+### Analyses delivered in _near real-time_
 
 «Data» is not useful by itself. Data must be cleaned, analysed, and the results delivered to stakeholders.
 
@@ -30,14 +27,11 @@ An effective outbreak response requires this in near real-time.
 
 Sykdomspulsen's goal is to achieve this.
 
+### Helse and Kvalitetsregister Conference materials
 
-### Helse and Kvalitetsregister Conference Materials
+See the link here to our [conference poster](./images/conference_poster.pdf)
 
-
-see the link here to our [conference poster](./images/conference_poster.pdf)
-
-see the link here to our [conference handout](./images/conference_handout.pdf)
-
+See the link here to our [conference handout](./images/conference_handout.pdf)
 
 ### Quick stats
 
@@ -47,20 +41,16 @@ see the link here to our [conference handout](./images/conference_handout.pdf)
 - 500 000+ analyses per day
 - 500+ automatic reports per day
 
-### Data Flow in Sykdomspulsen
-
-
-data flow in sykdomspulsen
+### Data flow in Sykdomspulsen
 
 [<img src="./images/data_flow_large.PNG" width="100%" height="100%">](./images/data_flow_large.PNG)
 
-
 ### Sykdomspulsen core
 
-Sykdomspulsen Core is the free and open-source backbone of Sykdomspulsen.
+[Sykdomspulsen Core](/core-in-depth/) is the free and open-source backbone of Sykdomspulsen.
 
 Sykdomspulsen Core is a standalone R package, which means it is easy for other teams to build up their own surveillance infrastructure based on Sykdomspulsen Core.
 
 ### splverse
 
-splverse is a number of R packages that have been developed by the Sykdomspulsen team to help with infectious diseases surveillance.
+[splverse](/packages) is a number of R packages that have been developed by the Sykdomspulsen team to help with infectious diseases surveillance.
