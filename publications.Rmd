@@ -1,0 +1,15 @@
+---
+title: "Publications (data)"
+description: |
+  Publications that use data and/or results from the Sykdomspulsen implementation at FHI.
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(data.table)
+```
+
+```{r, include=FALSE, warning = FALSE}
+d <- knitcitations::read.bibtex("biblio.bib")
+print(d)
+```
