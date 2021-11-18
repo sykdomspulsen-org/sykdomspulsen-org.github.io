@@ -3,10 +3,7 @@ title: "Sykdomspulsen"
 description: |
   Sykdomspulsen is a real-time analysis and disease surveillance system designed and developed at the Norwegian Institute of Public Health (NIPH/FHI).
 theme: sykdomspulsen.css
-<<<<<<< HEAD
 favicon: images/favicon.ico
-=======
->>>>>>> c62dabc56ea2d24df534aa6680ecaf7a120edea2
 base_url: https://docs.sykdomspulsen.no
 repository_url: https://github.com/sykdomspulsen-org/sykdomspulsen-org.github.io
 creative_commons: CC BY

@@ -31,11 +31,7 @@ Gry
 
 Jonas
 
-<<<<<<< HEAD
 **Richard Aubrey White** 
 
 ## Previous
-=======
-*Richard Aubrey White* 
->>>>>>> c62dabc56ea2d24df534aa6680ecaf7a120edea2
 
