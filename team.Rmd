@@ -8,8 +8,11 @@ description: |
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
+<<<<<<< HEAD
 ## Current
 
+=======
+>>>>>>> c62dabc56ea2d24df534aa6680ecaf7a120edea2
 Aurora
 
 Bea
@@ -28,7 +31,11 @@ Gry
 
 Jonas
 
+<<<<<<< HEAD
 **Richard Aubrey White** 
 
 ## Previous
+=======
+*Richard Aubrey White* 
+>>>>>>> c62dabc56ea2d24df534aa6680ecaf7a120edea2
 
