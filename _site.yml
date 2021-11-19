@@ -5,6 +5,7 @@ description: |
 theme: sykdomspulsen.css
 favicon: images/favicon.ico
 base_url: https://docs.sykdomspulsen.no
+preview: images/logo.png
 repository_url: https://github.com/sykdomspulsen-org/sykdomspulsen-org.github.io
 creative_commons: CC BY
 output_dir: "docs"
