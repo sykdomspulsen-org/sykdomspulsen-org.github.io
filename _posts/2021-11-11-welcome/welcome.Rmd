@@ -11,12 +11,10 @@ author:
     affiliation_url: https://www.fhi.no
     orcid_id: 0000-0002-6747-1726
 date: 2021-11-11
-draft: false
 output:
   distill::distill_article:
     self_contained: false
 ---
-
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)

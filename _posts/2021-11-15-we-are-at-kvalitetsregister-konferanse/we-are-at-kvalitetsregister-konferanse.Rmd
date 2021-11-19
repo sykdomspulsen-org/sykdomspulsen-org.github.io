@@ -4,7 +4,7 @@ description: |
   Come chat to us in the poster presentation time slot
 author:
   - name: Calvin Chiang
-date: 11-15-2021
+date: 2021-11-15
 output:
   distill::distill_article:
     self_contained: false
