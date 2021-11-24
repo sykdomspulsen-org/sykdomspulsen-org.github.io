@@ -27,12 +27,6 @@ An effective outbreak response requires this in near real-time.
 
 Sykdomspulsen's goal is to achieve this.
 
-### Helse and Kvalitetsregister Conference materials
-
-See the link here to our [conference poster](./images/conference_poster.pdf)
-
-See the link here to our [conference handout](./images/conference_handout.pdf)
-
 ### Quick stats
 
 - We receive data from more than 15 data sources every day
@@ -45,7 +39,7 @@ See the link here to our [conference handout](./images/conference_handout.pdf)
 
 [<img src="./images/data_flow_large.PNG" width="100%" height="100%">](./images/data_flow_large.PNG)
 
-### Sykdomspulsen core
+### Sykdomspulsen Core
 
 [Sykdomspulsen Core](/core-in-depth/) is the free and open-source backbone of Sykdomspulsen.
 

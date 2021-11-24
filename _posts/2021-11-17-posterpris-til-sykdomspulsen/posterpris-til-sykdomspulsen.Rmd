@@ -62,7 +62,7 @@ I infrastrukturen tas det inn data fra mer enn 15 datakilder, de fleste oppdater
 
 ## Analyser
 
-Sykdomspulsen gjør over 280 000 analyser automatisk hver dag. Noen av disse analysene er tunge regresjonsanalyser, der det kjøres enkeltanalyser per aldersgruppe og per kommune. Det viktige med en del av disse analysene er å kunne lage resultater som sier noe om det er en økning av infeksjon i forhold til tidligere. Dette er viktig for å kunne gjøre tiltak i rett tid.
+Sykdomspulsen gjør over 500 000 analyser automatisk hver dag. Noen av disse analysene er tunge regresjonsanalyser, der det kjøres enkeltanalyser per aldersgruppe og per kommune. Det viktige med en del av disse analysene er å kunne lage resultater som sier noe om det er en økning av infeksjon i forhold til tidligere. Dette er viktig for å kunne gjøre tiltak i rett tid.
 
 ## Leveranser
 
