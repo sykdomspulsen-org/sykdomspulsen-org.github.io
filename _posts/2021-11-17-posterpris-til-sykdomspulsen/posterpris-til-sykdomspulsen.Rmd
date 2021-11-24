@@ -70,7 +70,7 @@ Leveransene spenner over en stor skala fra enkle grafer til store rapporter. Den
 
 Sykdomspulsen leverer hver dag:
 
-- Covid-19 dagsrapporter før frokost (mer enn 370 stk hver dag)
+- Covid-19 dagsrapporter før frokost (mer enn 500 stk hver dag)
 - Oppdatering av data til fhi.no
 - Oppdatering av data til Sykdomspulsen for kommunehelsetjenesten nettsiden
 - Oppdatering av data til modelleringsgruppa på FHI
