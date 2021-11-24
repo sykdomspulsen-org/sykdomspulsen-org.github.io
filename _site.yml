@@ -21,6 +21,8 @@ navbar:
         href: core-in-depth/
       - text: "Infrastructure"
         href: infrastructure/
+      - text: "Surveillance + Stats"
+        href: surveillance-and-stats/
     - text: "About"
       menu:
       - text: "Team"

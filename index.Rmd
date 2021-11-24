@@ -3,7 +3,7 @@ site: distill::distill_website
 title: "Sykdomspulsen"
 description: |
   Sykdomspulsen is a real-time analysis and disease surveillance system designed and developed at the Norwegian Institute of Public Health (NIPH/FHI).
-image: "sykdomspulsen.png"
+preview: images/logo.png
 links:
   - label: GitHub
     url: "https://github.com/sykdomspulsen-org/"
