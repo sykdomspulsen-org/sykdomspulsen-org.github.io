@@ -84,7 +84,7 @@ Vi drifter en interaktiv nettside fra A til Å: Sykdomspulsen har bygget opp det
 
 ## Infrastruktur
 
-Sykdomspulsens infrastruktur er unik ved at den kan håndtere så store mengder data hver dag på en rask og effektiv måte. Infrastrukturen leser over 2 000 000 000 rader data og resultater (1TB) på daglig basis, og 800 database-tabeller. Infrastrukturen er basert på R som gjør at den er veldig fleksibel og kubernetes gjør at den er veldig robust og kan skaleres. I tillegg er infrastrukturen veldig sikker da det er tilgangskontroll på hele infrastrukturen og kryptering i alle ledd.
+Sykdomspulsens infrastruktur er unik ved at den kan håndtere så store mengder data hver dag på en rask og effektiv måte. Infrastrukturen leser over 2 000 000 000 rader data og resultater (1TB) på daglig basis, og 1000 database-tabeller. Infrastrukturen er basert på R som gjør at den er veldig fleksibel og kubernetes gjør at den er veldig robust og kan skaleres. I tillegg er infrastrukturen veldig sikker da det er tilgangskontroll på hele infrastrukturen og kryptering i alle ledd.
 
 
 
