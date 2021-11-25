@@ -22,7 +22,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 **Clémence**
 
-**Gry**
+**Gry Marysol Grøneng** is the project leader of Sykdomspulsen. She is a veterinarian with a PhD in Epidemiology. She has worked with surveillance of infectious diseases since 2015.
 
 **Jonas**
 
