@@ -37,6 +37,16 @@ knitr::include_graphics("poster.png")
 
 [conference_poster.pdf](./conference_poster.pdf)
 
+## Prisbelønnet handout
+
+```{r, layout="l-body-outset"}
+knitr::include_graphics("conference_handout_1.jpg")
+```
+
+```{r, layout="l-body-outset"}
+knitr::include_graphics("conference_handout_2.jpg")
+```
+
 [conference_handout.pdf](./conference_handout.pdf)
 
 ## Datakilder
