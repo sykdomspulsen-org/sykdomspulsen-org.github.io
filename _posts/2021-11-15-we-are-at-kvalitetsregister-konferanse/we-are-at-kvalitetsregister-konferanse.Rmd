@@ -23,12 +23,24 @@ Poster presentations are tomorrow (16/11/21) from 10:45 to 11:30, and you can fi
 
 If you missed us, please see below a copy of the poster and handout
 
-```{r, layout="l-body-outset"}
+## Poster
+
+```{r, layout="l-body", out.width = "100%"}
 knitr::include_graphics("poster.png")
 ```
 
-See our [conference poster](./conference_poster.pdf)
+[conference_poster.pdf](./conference_poster.pdf)
 
-See our [conference handout](./conference_handout.pdf)
+## Handout
+
+```{r, layout="l-body", out.width = "100%"}
+knitr::include_graphics("conference_handout_1.jpg")
+```
+
+```{r, layout="l-body", out.width = "100%"}
+knitr::include_graphics("conference_handout_2.jpg")
+```
+
+[conference_handout.pdf](./conference_handout.pdf)
 
 

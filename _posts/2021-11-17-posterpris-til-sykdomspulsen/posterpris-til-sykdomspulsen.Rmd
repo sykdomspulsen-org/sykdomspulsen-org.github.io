@@ -21,7 +21,7 @@ Det var totalt 47 postere på konferansen og Sykdomspulsen fikk prisen med omtal
 
 - Vi er de første i FHI som har et helautomatisk system som tar inn data, analyserer data og leverer rapporter, tabeller, kart, i tillegg til å levere data til GitHub og APIer for nettsider og modelleringsgruppen samt drifter en interaktiv nettside. Alt dette gjøres på en sikker, skalerbar og høyteknologisk infrastruktur uten en eneste manuell prosess. Vi er i tillegg kun seks årsverk som jobber med alt fra endring og inklusjon av nye datakilder, drift av infrastruktur og nettside, forbedring og brukersupport, forteller Gry.
 
-```{r, layout="l-body-outset"}
+```{r, layout="l-body", out.width = "100%"}
 knitr::include_graphics("screenshot.png")
 ```
 
@@ -31,7 +31,7 @@ knitr::include_graphics("screenshot.png")
 
 ## Prisbelønnet poster
 
-```{r, layout="l-body-outset"}
+```{r, layout="l-body", out.width = "100%"}
 knitr::include_graphics("poster.png")
 ```
 
@@ -39,11 +39,11 @@ knitr::include_graphics("poster.png")
 
 ## Prisbelønnet handout
 
-```{r, layout="l-body-outset"}
+```{r, layout="l-body", out.width = "100%"}
 knitr::include_graphics("conference_handout_1.jpg")
 ```
 
-```{r, layout="l-body-outset"}
+```{r, layout="l-body", out.width = "100%"}
 knitr::include_graphics("conference_handout_2.jpg")
 ```
 
