@@ -32,6 +32,6 @@ knitr::opts_chunk$set(echo = FALSE)
 
 **David Swanson** received his PhD in Biostatistics from Harvard University. He is a statistician with research interests and experience in mixed models, smoothing, survival analysis, genomics, and epidemiology. During 2021 he worked on the Sykdomspulsen research team with a focus on campylobacter modelling and surveillance/prediction of gastroenteritis. He also had a joint position in the Department of Biostatistics, University of Oslo and Oslo University Hospital.
 
-**Gunnar Øyvind Isaksson Rø** is a physicist/epidemiologist with research interests in infectious disease spread modelling. From 2019 to 2020 he worked on the Sykdomspulsen primary team with a focus on influenza surveillance. His significant contributions to Sykdomspulsen Core were 1) proposing to use databases as a seamless backend, and 2) creating the first "task_to_config" function (and concept).
+**Gunnar Øyvind Isaksson Rø** is a physicist/epidemiologist with research interests in infectious disease modelling. From 2019 to 2020 he worked on the Sykdomspulsen primary team with a focus on influenza surveillance. His significant contributions to Sykdomspulsen Core were 1) proposing to use databases as a seamless backend, and 2) creating the first "task_to_config" function (and concept).
 
 
