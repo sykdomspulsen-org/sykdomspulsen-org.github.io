@@ -19,9 +19,9 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-You can find the course "Which Stats Method" in the [Learning page](./learning.html).
+You can find the course "Which Stats Method" in the [Learning page](/learning.html).
 
-This course will not teach students how to implement these statistical methods, as there is not sufficient time. The aim of this course is to enable the student to identify which methods are required for their study, allowing the student to identify their needs for subsequent methods courses, self-learning, or external help.
+This course will not teach students how to implement these statistical methods. The aim of this course is to enable the student to identify which methods are required for their study, allowing the student to identify their needs for subsequent methods courses, self-learning, or external help.
 
 You should take this course if you are one of the following:
 
