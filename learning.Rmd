@@ -1,0 +1,15 @@
+---
+title: "Learning"
+description: |
+  Learning sources related to infectious disease surveillance.
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+[Real-Time Surveillance of Infectious Diseases: A Statistical Perspective](./surveillance-and-stats/) 
+
+[Which Stats Method?](./which-stats-method/)
+
+[Longitudinal Analysis for Surveillance](./longitudinal-analysis-for-surveillance/)

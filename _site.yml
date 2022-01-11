@@ -15,14 +15,14 @@ navbar:
       href: index.html
     - text: "Packages"
       href: packages.html
-    - text: "Documentation"
+    - text: "Learning"
+      href: learning.html
+    - text: "SP Documentation"
       menu:
       - text: "Core"
         href: core-in-depth/
       - text: "Infrastructure"
         href: infrastructure/
-      - text: "Surveillance + Stats"
-        href: surveillance-and-stats/
     - text: "About"
       menu:
       - text: "Team"
