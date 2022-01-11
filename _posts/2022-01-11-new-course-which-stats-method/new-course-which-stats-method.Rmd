@@ -1,0 +1,29 @@
+---
+title: "New Course: Which Stats Method?"
+description: |
+  Sykdomspulsen publishes a short course that provides a basic overview of general statistical methodology that can be useful in the areas of infectious diseases, environmental medicine, and labwork. By the end of this course, students will be able to identify appropriate statistical methods for a variety of circumstances.
+author:
+  - name: Richard Aubrey White
+date: 2022-01-11
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+You can find the course "Which Stats Method" in the [Learning](./learning.html) tab.
+
+This course will not teach students how to implement these statistical methods, as there is not sufficient time. The aim of this course is to enable the student to identify which methods are required for their study, allowing the student to identify their needs for subsequent methods courses, self-learning, or external help.
+
+You should take this course if you are one of the following:
+
+- Have experience with applying statistical methods, but are sometimes confused or uncertain as to whether or not you have selected the correct method.
+- Do not have experience with applying statistical methods, and would like to get an overview over which methods are applicable for your projects so that you can then undertake further studies in these areas.
+
+
+```{r, layout="l-body", out.width = "100%"}
+knitr::include_graphics("reference.png")
+```
