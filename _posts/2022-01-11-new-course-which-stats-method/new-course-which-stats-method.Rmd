@@ -1,7 +1,7 @@
 ---
 title: "New Course: Which Stats Method?"
 description: |
-  Sykdomspulsen had published a short course that provides a basic overview of general statistical methodology that can be useful in the areas of infectious diseases, environmental medicine, and labwork. By the end of this course, students will be able to identify appropriate statistical methods for a variety of circumstances.
+  Sykdomspulsen has published a short course that provides a basic overview of general statistical methodology that can be useful in the areas of infectious diseases, environmental medicine, and labwork. By the end of this course, students will be able to identify appropriate statistical methods for a variety of circumstances.
 author:
   - first_name: "Richard Aubrey"
     last_name: "White"
