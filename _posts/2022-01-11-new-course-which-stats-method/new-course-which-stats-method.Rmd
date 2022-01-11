@@ -3,7 +3,12 @@ title: "New Course: Which Stats Method?"
 description: |
   Sykdomspulsen had published a short course that provides a basic overview of general statistical methodology that can be useful in the areas of infectious diseases, environmental medicine, and labwork. By the end of this course, students will be able to identify appropriate statistical methods for a variety of circumstances.
 author:
-  - name: Richard Aubrey White
+  - first_name: "Richard Aubrey"
+    last_name: "White"
+    url: https://www.fhi.no
+    affiliation: Folkehelseinstituttet
+    affiliation_url: https://www.fhi.no
+    orcid_id: 0000-0002-6747-1726
 date: 2022-01-11
 output:
   distill::distill_article:
