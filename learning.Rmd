@@ -18,7 +18,7 @@ knitr::include_graphics("learning/real-time-surveillance-of-infectious-diseases-
 
 ## Courses
 
-```{r, layout="l-body", out.width = "20%"}
+```{r, layout="l-body", out.width = "30%"}
 knitr::include_graphics("learning/which-stats-method.png")
 ```
 
