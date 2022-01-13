@@ -8,8 +8,22 @@ description: |
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
+## Books
+
+```{r, layout="l-body", out.width = "30%"}
+knitr::include_graphics("learning/real-time-surveillance-of-infectious-diseases-a-statistical-perspective.png")
+```
+
 [Real-Time Surveillance of Infectious Diseases: A Statistical Perspective](./surveillance-and-stats/) 
 
+## Courses
+
+```{r, layout="l-body", out.width = "20%"}
+knitr::include_graphics("learning/which-stats-method.png")
+```
+
 [Which Stats Method?](./which-stats-method/)
+
+***
 
 [Longitudinal Analysis for Surveillance](./longitudinal-analysis-for-surveillance/)
