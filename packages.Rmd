@@ -15,7 +15,9 @@ knitr::opts_chunk$set(echo = FALSE)
 knitr::include_graphics("packages/splverse.png")
 ```
 
-If you want to install the dev versions (or access packages that haven't been released on CRAN), run `usethis::edit_r_profile()` to edit your .Rprofile. Then write in:
+If you want to install the dev versions (or access packages that haven't been released on CRAN), run `usethis::edit_r_profile()` to edit your `.Rprofile`. 
+
+Then write in:
 
 ```
 options(
@@ -26,7 +28,9 @@ options(
 )
 ```
 
-Save the file and restart R. This will allow you to install splverse packages from the FHI registry.
+Save the file and restart R.
+
+You can now install [splverse](https://docs.sykdomspulsen.no/packages) packages from the FHI registry.
 
 ## The splverse
 
