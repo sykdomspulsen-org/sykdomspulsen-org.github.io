@@ -35,6 +35,16 @@ You can now install [splverse](https://docs.sykdomspulsen.no/packages) packages 
 ## The splverse
 
 ```{r, layout="l-body", out.width = "20%"}
+knitr::include_graphics("packages/nowcast.png")
+```
+
+[nowcast](./nowcast) helps you predict the present.
+
+[Go to docs...](./org)
+
+***
+
+```{r, layout="l-body", out.width = "20%"}
 knitr::include_graphics("packages/org.png")
 ```
 
