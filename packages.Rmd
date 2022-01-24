@@ -1,5 +1,5 @@
 ---
-title: "Packages/splverse"
+title: "Packages / splverse"
 description: |
   A set of R packages developed to help solve problems that frequently occur when performing infectious disease surveillance.
 base_url: https://docs.sykdomspulsen.no
@@ -7,6 +7,10 @@ base_url: https://docs.sykdomspulsen.no
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r, layout="l-body", out.width = "100%"}
+knitr::include_graphics("packages/hex_dependencies.png")
 ```
 
 ## Installation and Use
