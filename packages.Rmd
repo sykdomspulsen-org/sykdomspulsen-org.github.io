@@ -115,3 +115,16 @@ knitr::include_graphics("packages/spltime.png")
 [spltime](./spltime) contains helpful functions for working with time.
 
 [Go to docs...](./spltime)
+
+***
+
+```{r, layout="l-body", out.width = "20%"}
+knitr::include_graphics("packages/spread.png")
+```
+
+[spread](./spread) contains different infectious disease spread models.
+
+[Go to docs...](./spread)
+
+
+
