@@ -39,12 +39,22 @@ You can now install [splverse](https://docs.sykdomspulsen.no/packages) packages 
 ## The splverse
 
 ```{r, layout="l-body", out.width = "20%"}
+knitr::include_graphics("packages/attrib.png")
+```
+
+[attrib](./attrib) is designed to make the process of calculating attributable mortalities and incident risk ratios efficient and easy.
+
+[Go to docs...](./attrib)
+
+***
+
+```{r, layout="l-body", out.width = "20%"}
 knitr::include_graphics("packages/nowcast.png")
 ```
 
 [nowcast](./nowcast) helps you predict the present.
 
-[Go to docs...](./org)
+[Go to docs...](./nowcast)
 
 ***
 
@@ -85,6 +95,16 @@ knitr::include_graphics("packages/splmaps.png")
 [splmaps](./splmaps) contains preformatted maps of Norway that generally don't need geolibraries.
 
 [Go to docs...](./splmaps)
+
+***
+
+```{r, layout="l-body", out.width = "20%"}
+knitr::include_graphics("packages/splshiny.png")
+```
+
+[splshiny](./splshiny) contains helpful functions for creating Shiny websites.
+
+[Go to docs...](./splshiny)
 
 ***
 
