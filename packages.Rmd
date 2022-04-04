@@ -79,6 +79,16 @@ knitr::include_graphics("packages/plnr.png")
 ***
 
 ```{r, layout="l-body", out.width = "20%"}
+knitr::include_graphics("packages/splalert.png")
+```
+
+[splalert](./splalert) helps create alerts from public health surveillance data.
+
+[Go to docs...](./splalert)
+
+***
+
+```{r, layout="l-body", out.width = "20%"}
 knitr::include_graphics("packages/spldata.png")
 ```
 
@@ -124,7 +134,7 @@ knitr::include_graphics("packages/spltidy.png")
 
 [spltidy](./spltidy) contains helpful functions for cleaning data.
 
-[Go to docs...](./spltime)
+[Go to docs...](./spltidy)
 
 ***
 

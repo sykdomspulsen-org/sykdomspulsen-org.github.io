@@ -32,8 +32,8 @@ Sykdomspulsen's goal is to achieve this.
 - We receive data from more than 15 data sources every day
 - 2 000 000 000+ rows of data and results (1TB)
 - 1000+ database tables
-- 500 000+ analyses per day
-- 500+ automatic reports per day
+- 1 000 000+ analyses per day
+- 100+ automatic reports per day
 
 ### Data flow in Sykdomspulsen
 
