@@ -10,15 +10,13 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Current
 
-**Aurora Christine Hofman** is about to finish a Master in Statistics at the Norwegian University of Science and Technology (NTNU). She now works on a collaboration project with the Norwegian Cause of Death Registry (Dødsårsaksregisteret) to create surveillance models for cause-specific mortality and was a part of the team who created the R-package attrib.
-
 **Beatriz Valcarcel Salamanca** completed her PhD in Statistical Genetics in the Department of Epidemiology and Biostatistics at Imperial College London. Prior to her PhD, she completed an MSc in Bioinformatics with Systems Biology by Birkbeck College, University of London. In October 2014, she began working as a researcher at FHI in projects related to vaccine-preventable diseases. She is currently working on the surveillance of infectious respiratory diseases.
 
 **Calvin**
 
 **Celine Victoria Berg-Hansen** completed her bachelor's degree in Computer Science: Language Technology at the University of Oslo in the spring of 2021. She now works full-time in the Sykdomspulsen team as a developer.
 
-**Chi Zhang** is about to finish her PhD on statistical methods for hospital Electronic Health Records at the University of Oslo. She has a MSc in Statistics from Imperial College London. Since Chi joined FHI in 2020, she has been working on the R-packages splverse that are key to the Sykdomspulsen infrastructure. Chi is responsible for NorMOMO (excess mortality surveillance in Norway).
+**Chi Zhang** completed her PhD on statistical methods for hospital Electronic Health Records at the University of Oslo, and her MSc in Statistics from Imperial College London. Since Chi joined FHI in 2020, she has been working on the R-packages splverse that are key to the Sykdomspulsen infrastructure. Chi is responsible for NorMOMO (excess mortality surveillance in Norway).
 
 **Clémence Koren** completed her MSc in Biology at UiT The Arctic University of Norway in 2018. She started working at FHI in 2020 on the One Health surveillance of Campylobacter-related gastrointestinal infections. She has been working part-time in Sykdomspulsen on visual design and front-end development.
 
@@ -26,11 +24,15 @@ knitr::opts_chunk$set(echo = FALSE)
 
 **Jonas**
 
-**Richard Aubrey White** received his PhD in Biostatistics from Harvard University. He has previously worked on outbreaks/surveillance projects in Sierra Leone (Ebola), Mozambique (cholera), and Palestine (maternal health). He now works primarily on the infrastructure Sykdomspulsen Core and the R-package plnr.
+**Miriam**
+
+**Richard Aubrey White** completed his PhD in Biostatistics at Harvard University. He has previously worked on outbreaks/surveillance projects in Sierra Leone (Ebola), Mozambique (cholera), and Palestine (maternal health). He now works primarily on the infrastructure Sykdomspulsen Core and the R-package plnr.
 
 ## Previous
 
-**David Swanson** received his PhD in Biostatistics from Harvard University. He is a statistician with research interests and experience in mixed models, smoothing, survival analysis, genomics, and epidemiology. During 2021 he worked on the Sykdomspulsen research team with a focus on campylobacter modelling and surveillance/prediction of gastroenteritis. He also had a joint position in the Department of Biostatistics, University of Oslo and Oslo University Hospital.
+**Aurora Christine Hofman** completed her MSc in Statistics at the Norwegian University of Science and Technology (NTNU). She worked on a collaboration project with the Norwegian Cause of Death Registry (Dødsårsaksregisteret) to create surveillance models for cause-specific mortality and was a part of the team who created the R-package attrib.
+
+**David Swanson** completed his PhD in Biostatistics at Harvard University. He is a statistician with research interests and experience in mixed models, smoothing, survival analysis, genomics, and epidemiology. During 2021 he worked on the Sykdomspulsen research team with a focus on campylobacter modelling and surveillance/prediction of gastroenteritis. He also had a joint position in the Department of Biostatistics, University of Oslo and Oslo University Hospital.
 
 **Gunnar Øyvind Isaksson Rø** is a physicist/epidemiologist with research interests in infectious disease modelling. From 2019 to 2020 he worked on the Sykdomspulsen primary team with a focus on influenza surveillance. His significant contributions to Sykdomspulsen Core were 1) proposing to use databases as a seamless backend, and 2) creating the first "task_to_config" function (and concept).
 
