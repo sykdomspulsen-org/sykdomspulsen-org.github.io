@@ -30,7 +30,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Previous
 
-**Aurora Christine Hofman** completed her MSc in Statistics at the Norwegian University of Science and Technology (NTNU). She worked on a collaboration project with the Norwegian Cause of Death Registry (Dødsårsaksregisteret) to create surveillance models for cause-specific mortality and was a part of the team who created the R-package attrib.
+**Aurora Christine Hofman** completed her MSc in Statistics at the Norwegian University of Science and Technology (NTNU). From 2020 to 2022 she worked on a collaboration project with the Norwegian Cause of Death Registry (Dødsårsaksregisteret) to create surveillance models for cause-specific mortality and was a part of the team who created the R-package attrib.
 
 **David Swanson** completed his PhD in Biostatistics at Harvard University. He is a statistician with research interests and experience in mixed models, smoothing, survival analysis, genomics, and epidemiology. During 2021 he worked on the Sykdomspulsen research team with a focus on campylobacter modelling and surveillance/prediction of gastroenteritis. He also had a joint position in the Department of Biostatistics, University of Oslo and Oslo University Hospital.
 
