@@ -14,7 +14,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 **Calvin**
 
-**Celine Victoria Berg-Hansen** completed her bachelor's degree in Computer Science: Language Technology at the University of Oslo in the spring of 2021. She now works full-time in the Sykdomspulsen team as a developer.
+**Celine Victoria Berg-Hansen** completed her bachelor's degree in Computer Science: Language Technology at the University of Oslo in 2021. She now works full-time in the Sykdomspulsen team as a developer.
 
 **Chi Zhang** completed her PhD on statistical methods for hospital Electronic Health Records at the University of Oslo, and her MSc in Statistics from Imperial College London. Since Chi joined FHI in 2020, she has been working on the R-packages splverse that are key to the Sykdomspulsen infrastructure. Chi is responsible for NorMOMO (excess mortality surveillance in Norway).
 
