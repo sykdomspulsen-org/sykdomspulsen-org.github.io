@@ -23,12 +23,19 @@ navbar:
         href: infrastructure/
       - text: "Books and courses"
         href: learning.html
+    - text: "Publications"
+      menu:
+      - text: "Publications"
+        href: publications.html
+      - text: "Software"
+        href: publication_software.html
+      - text: "Talks"
+        href: publication_talks.html
+
     - text: "About"
       menu:
       - text: "Team"
         href: team.html
-      - text: "Publications"
-        href: publications.html
     - text: "Blog"
       href: blog.html
     - icon: fab fa-github
