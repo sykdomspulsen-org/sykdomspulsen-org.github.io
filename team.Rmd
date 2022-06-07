@@ -12,7 +12,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 **Beatriz Valcarcel Salamanca** completed her PhD in Statistical Genetics in the Department of Epidemiology and Biostatistics at Imperial College London. Prior to her PhD, she completed an MSc in Bioinformatics with Systems Biology by Birkbeck College, University of London. In October 2014, she began working as a researcher at FHI in projects related to vaccine-preventable diseases. She is currently working on the surveillance of infectious respiratory diseases.
 
-**Calvin**
+**Calvin** is a experienced engineer.
 
 **Celine Victoria Berg-Hansen** completed her bachelor's degree in Computer Science: Language Technology at the University of Oslo in 2021. She now works full-time in the Sykdomspulsen team as a developer.
 
