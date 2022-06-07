@@ -16,13 +16,13 @@ navbar:
     - text: "Packages"
       href: packages.html
     - text: "Learning"
-      href: learning.html
-    - text: "SP Documentation"
       menu:
       - text: "Core"
         href: core-in-depth/
       - text: "Infrastructure"
         href: infrastructure/
+      - text: "Books and courses"
+        href: learning.html
     - text: "About"
       menu:
       - text: "Team"
