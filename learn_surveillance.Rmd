@@ -1,0 +1,13 @@
+---
+title: "Real-time surveillance"
+description: |
+  Software publications that are related to Sykdomspulsen.
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Software
+
+Software

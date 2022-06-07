@@ -15,13 +15,19 @@ navbar:
       href: index.html
     - text: "Packages"
       href: packages.html
-    - text: "Learning"
+    - text: "Blog"
+      href: blog.html
+    - text: "Learn"
       menu:
-      - text: "Core"
+      - text: "Real-time surveillance"
+        href: learn_surveillance.html
+      - text: "Methods"
+        href: learn_methods.html
+      - text: "Sykdomspulsen Core"
         href: core-in-depth/
       - text: "Infrastructure"
         href: infrastructure/
-      - text: "Books and courses"
+      - text: "Courses (in progress)"
         href: learning.html
     - text: "Publications"
       menu:
@@ -31,13 +37,12 @@ navbar:
         href: publication_software.html
       - text: "Talks"
         href: publication_talks.html
-
+      - text: "Books (in progress)"
+        href: publication_books.html
     - text: "About"
       menu:
       - text: "Team"
         href: team.html
-    - text: "Blog"
-      href: blog.html
     - icon: fab fa-github
       href: https://github.com/sykdomspulsen-org
 output: distill::distill_article
