@@ -17,32 +17,26 @@ navbar:
       href: packages.html
     - text: "Blog"
       href: blog.html
-    - text: "Learn"
-      menu:
-      - text: "Real-time surveillance"
-        href: learn_surveillance.html
-      - text: "Methods"
-        href: learn_methods.html
-      - text: "Sykdomspulsen Core"
-        href: core-in-depth/
-      - text: "Infrastructure"
-        href: infrastructure/
-      - text: "Courses (in progress)"
-        href: learning.html
-    - text: "Publications"
+    - text: "Resources"
       menu:
       - text: "Publications"
         href: publications.html
-      - text: "Software"
-        href: publication_software.html
       - text: "Talks"
         href: publication_talks.html
+      - text: "Tutorials"
+        href: learn_surveillance.html
       - text: "Books (in progress)"
         href: publication_books.html
+      - text: "Courses (in progress)"
+        href: learning.html
+
     - text: "About"
       menu:
-      - text: "Team"
-        href: team.html
+      - text: "Meet the team"
+        href: about_team.html
+      - text: "Contact"
+        href: about_contact.html
+
     - icon: fab fa-github
       href: https://github.com/sykdomspulsen-org
 output: distill::distill_article
