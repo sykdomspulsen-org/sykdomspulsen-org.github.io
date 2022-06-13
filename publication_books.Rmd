@@ -8,6 +8,10 @@ description: |
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-## Software
 
-Software
+```{r, layout="l-body", out.width = "30%"}
+knitr::include_graphics("learning/real-time-surveillance-of-infectious-diseases-a-statistical-perspective.png")
+```
+
+[Real-Time Surveillance of Infectious Diseases: A Statistical Perspective](./surveillance-and-stats/) is a book **currently under early development**.
+

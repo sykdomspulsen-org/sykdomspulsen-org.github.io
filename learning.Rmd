@@ -1,22 +1,13 @@
 ---
-title: "Learning"
+title: "Courses"
 description: |
-  Learning sources related to infectious disease surveillance.
+  Courses under development related to infectious disease surveillance.
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-## Books
-
-```{r, layout="l-body", out.width = "30%"}
-knitr::include_graphics("learning/real-time-surveillance-of-infectious-diseases-a-statistical-perspective.png")
-```
-
-[Real-Time Surveillance of Infectious Diseases: A Statistical Perspective](./surveillance-and-stats/) is a book **currently under early development**.
-
-## Courses
 
 ```{r, layout="l-body", out.width = "30%"}
 knitr::include_graphics("learning/which-stats-method.png")

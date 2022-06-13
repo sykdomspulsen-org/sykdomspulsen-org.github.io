@@ -21,10 +21,10 @@ navbar:
       menu:
       - text: "Publications"
         href: publications.html
-      - text: "Talks"
+      - text: "Presentations"
         href: publication_talks.html
       - text: "Tutorials"
-        href: learn_surveillance.html
+        href: publication_tutorials.html
       - text: "Books (in progress)"
         href: publication_books.html
       - text: "Courses (in progress)"
