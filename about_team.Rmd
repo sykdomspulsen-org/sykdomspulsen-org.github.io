@@ -22,9 +22,9 @@ knitr::opts_chunk$set(echo = FALSE)
 
 **Gry Marysol Grøneng** is the project leader of Sykdomspulsen. She is a veterinarian with a PhD in Epidemiology. She has worked with surveillance of infectious diseases since 2015.
 
-**Jonas**
+**Jonas Christoffer Lindstrøm** is a statistician working part-time at Sykdomspulsen. He collaborates with the modelling team at FHI, and works on the `spldata` package.
 
-**Miriam**
+**Miriam Vatshelle** completed her bachelor's degree in nursing at VID Specialized University in Bergen. She has several years of experience working in the municipal health care services and worked in the frontline of the Covid-19 pandemic, until she started working at FHI in January 2022. She now works full-time at Sykdomspulsen team as an advisor.
 
 **Richard Aubrey White** completed his PhD in Biostatistics at Harvard University. He has previously worked on outbreaks/surveillance projects in Sierra Leone (Ebola), Mozambique (cholera), and Palestine (maternal health). He now works primarily on the infrastructure Sykdomspulsen Core and the R-package plnr.
 
