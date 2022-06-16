@@ -11,5 +11,5 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ### Autoreport 101
 
-In this tutorial we introduce how to make a basic automated report using Rmarkdown and MS office. [Link](https://github.com/sykdomspulsen-org/resources/blob/main/tutorial_autoreport/autoreport_101.md)
+In this tutorial we introduce how to make a basic automated report using Rmarkdown and MS office. [Link](https://github.com/sykdomspulsen-org/resources/tree/main/tutorial_autoreport)
 

@@ -19,7 +19,7 @@ print(d, .opts = list(sorting="ydnt", bib.style = "authoryear", max.names = 1, d
 
 ### R meetings
 
-"Real-time public health surveillance with Sykdomspulsen" at Oslo R Users Meetup. Presented by Chi Zhang, 2022-06-16. *Presentation link incoming*. 
+"Real-time public health surveillance with Sykdomspulsen" at Oslo R Users Meetup. Presented by Chi Zhang, 2022-06-16. [Link](https://github.com/sykdomspulsen-org/resources/tree/main/talks). 
 
 
 ### Seminar talks
