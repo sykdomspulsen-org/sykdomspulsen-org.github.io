@@ -13,6 +13,11 @@ knitr::opts_chunk$set(echo = FALSE)
 knitr::include_graphics("packages/hex_dependencies.png")
 ```
 
+> All genuine knowledge originates in direct experience.
+> - Mao Zedong
+
+The splverse has been created by an infectious disease surveillance team who uses it every day to streamline and improve their pipelines and deliverables. The splverse has been used and improved throughout the COVID-19 pandemic, forming the basis of all of our products.
+
 ## Installation and Use
 
 ```{r, layout="l-body", out.width = "20%", preview=TRUE}
@@ -145,6 +150,16 @@ knitr::include_graphics("packages/spltime.png")
 [spltime](./spltime) contains helpful functions for working with time.
 
 [Go to docs...](./spltime)
+
+***
+
+```{r, layout="l-body", out.width = "20%"}
+knitr::include_graphics("packages/splutil.png")
+```
+
+[splutil](./splutil) contains helpful functions to help with common base R problems.
+
+[Go to docs...](./splutil)
 
 ***
 
