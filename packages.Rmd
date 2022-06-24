@@ -2,6 +2,10 @@
 title: "Packages / splverse"
 description: |
   A set of R packages developed to help solve problems that frequently occur when performing infectious disease surveillance.
+  The splverse has been created by the Sykdomspulsen team (specialized in infectious disease surveillance), who use it every 
+  day to streamline and improve their pipelines and deliverables. The splverse has been used and improved throughout the COVID-19 pandemic, 
+  forming the basis of all of Sykdomspulsen's products.
+
 base_url: https://docs.sykdomspulsen.no
 ---
 
@@ -9,14 +13,12 @@ base_url: https://docs.sykdomspulsen.no
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-```{r, layout="l-body", out.width = "100%"}
-knitr::include_graphics("packages/hex_dependencies.png")
-```
-
 > All genuine knowledge originates in direct experience.
 > - Mao Zedong
 
-The splverse has been created by an infectious disease surveillance team who uses it every day to streamline and improve their pipelines and deliverables. The splverse has been used and improved throughout the COVID-19 pandemic, forming the basis of all of our products.
+```{r, layout="l-body", out.width = "100%"}
+knitr::include_graphics("packages/hex_dependencies.png")
+```
 
 ## Installation and Use
 
