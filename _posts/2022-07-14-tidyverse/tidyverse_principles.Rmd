@@ -1,0 +1,22 @@
+---
+title: "Tidyverse principles at Sykdomspulsen"
+description: |
+  At Sykdomspulsen we adopt the Tidyverse principles.
+author:
+  - first_name: "Chi"
+    last_name: "Zhang"
+    url: https://www.fhi.no
+    affiliation: Folkehelseinstituttet
+    affiliation_url: https://www.fhi.no
+    orcid_id: 0000-0002-6747-1726
+date: 2022-07-14
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+This is some test text
