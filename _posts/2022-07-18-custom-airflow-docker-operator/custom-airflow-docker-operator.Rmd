@@ -44,7 +44,7 @@ It is for this reason that we developed a [custom Airflow Docker operator](https
 1. Checks an external YAML config file (`https://raw.githubusercontent.com/USERNAME/REPO/main/airflow-dag-on-server.yaml`) to see which server each DAG should be run on.
 2. Checks to see if this server is the correct one.
 3. If this is not the correct server, change the command to be excecuted to: `echo NOT CORRECT SERVER`.
-4. Execute the command inside the Docker container. 
+4. Executes the command inside the Docker container. 
 
 ## Details
 
