@@ -77,7 +77,6 @@ from airflow.operators.docker_operator import DockerOperator
 class SCDockerOperator(DockerOperator):
     def __init__(self, **kwargs) -> None:
         super().__init__(**kwargs)
-        # self.name = name
 
     def execute(self, context):
         response = requests.get(
