@@ -1,7 +1,7 @@
 ---
-title: "Real-time surveillance with splverse"
+title: "Automated reporting in real-time public health surveillance"
 description: |
-  In this post we demonstrate how we use splverse to carry out real-time public health surveillance.
+  In this post we introduce how Sykdomspulsen uses automated reports to carry out surveillance tasks.
 author:
   - first_name: "Chi"
     last_name: "Zhang"
@@ -21,8 +21,8 @@ knitr::opts_chunk$set(echo = FALSE)
 
 (introduction to the topic)
 
-# Real-time public health surveillance
- (everything apart from details in autoreports)
+# Autoreports
+
 
 
 
