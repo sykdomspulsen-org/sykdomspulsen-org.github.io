@@ -1,5 +1,5 @@
 ---
-title: "We are at Kvalitetsregister Konferanse today/tomorrow!"
+title: "We are at Kvalitetsregister Konferanse Today/Tomorrow!"
 description: |
   Come chat to us in the poster presentation time slot
 author:
