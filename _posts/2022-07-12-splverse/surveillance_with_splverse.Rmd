@@ -1,7 +1,7 @@
 ---
-title: "Tidyverse principles at Sykdomspulsen"
+title: "From data to reports: real-time surveillance with splverse"
 description: |
-  At Sykdomspulsen we adopt the Tidyverse principles.
+  In this post we demonstrate how we use splverse to carry out real-time public health surveillance.
 author:
   - first_name: "Chi"
     last_name: "Zhang"
@@ -9,7 +9,7 @@ author:
     affiliation: Folkehelseinstituttet
     affiliation_url: https://www.fhi.no
     orcid_id: 0000-0003-0501-5909
-date: 2022-07-14
+date: 2022-07-12
 output:
   distill::distill_article:
     self_contained: false
@@ -19,26 +19,15 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-This is some test text
+(introduction to the topic)
 
-# Tidyverse design principles 
-
-This is a paragraph
-
-# Tidyverse principle at Sykdomspulsen 
-
-## Human centered
-
-How does it look 
-
-## consistent
+# Real-time public health surveillance
 
 
 
-## composable 
 
 
-## inclusive 
+
 
 
 
