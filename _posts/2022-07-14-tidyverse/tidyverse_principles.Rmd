@@ -21,9 +21,24 @@ knitr::opts_chunk$set(echo = FALSE)
 
 This is some test text
 
+
+
+
 # Tidyverse design principles 
 
-This is a paragraph
+The [unifying principles](https://design.tidyverse.org/unifying-principles.html) introduced by the tidyverse team serve the purpose of making code easier for the human doing the data analysis tasks. There are four core principles: 
+
+* Human cenetered
+
+* Consistent
+
+* Composable
+
+* Inclusive
+
+
+
+
 
 # Tidyverse principle at Sykdomspulsen 
 
