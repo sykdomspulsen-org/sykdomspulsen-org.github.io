@@ -1483,26 +1483,101 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </div>
 
 <div class="d-article">
-<p>This is some test text</p>
-<h1 id="tidyverse-design-principles">Tidyverse design principles</h1>
+<p>Sykdomspulsen’s deliverables (reports and website) for evidence-based
+decision making during the COVID-19 pandemic, and it is crucial that the
+code is high quality, and is able to be developed at a fast pace. The
+Sykdomspulsen team members come from a variety of disciplines, ranging
+from statistics, epidemiology, ecology, medicine and computer science.
+We are a small team, and oftentimes it is necessary to take over tasks
+from another person to make timely deliveries. In this post I will talk
+about how the Sykdomspulsen team follow the tidyverse principles for
+fast and high quality task development.</p>
+<h2 id="tidyverse-design-principles">Tidyverse design principles</h2>
 <p>The <a
 href="https://design.tidyverse.org/unifying-principles.html">unifying
 principles</a> introduced by the tidyverse team serve the purpose of
 making code easier for the human doing the data analysis tasks. There
 are four core principles:</p>
 <ul>
-<li><p>Human cenetered</p></li>
-<li><p>Consistent</p></li>
-<li><p>Composable</p></li>
-<li><p>Inclusive</p></li>
+<li><p><strong>Human centered</strong>: code should serve the human
+analysts, especially that R is mostly used by non-programmers. Ease to
+use is key.</p></li>
+<li><p><strong>Consistent</strong>: code style should be consistent, so
+that one only needs to learn one style and it applies
+everywhere.</p></li>
+<li><p><strong>Composable</strong>: a complex task should be decomposed
+into smaller, independent tasks.</p></li>
+<li><p><strong>Inclusive</strong>: the tidyverse community is welcoming
+and friendly, which creates a good learning environment.</p></li>
 </ul>
-<h1 id="tidyverse-principle-at-sykdomspulsen">Tidyverse principle at
-Sykdomspulsen</h1>
-<h2 id="human-centered">Human centered</h2>
-<p>How does it look</p>
-<h2 id="consistent">consistent</h2>
-<h2 id="composable">composable</h2>
-<h2 id="inclusive">inclusive</h2>
+<p>These four principles do not live without one another. Human is the
+core of these principles, where developing code that are consistent,
+composable would make it easier to develop code and troubleshoot.
+Creating an inclusive community makes every member in it benefit from
+each other.</p>
+<h2 id="tidyverse-principle-at-sykdomspulsen">Tidyverse principle at
+Sykdomspulsen</h2>
+<p>Here are <em>some</em> of the deliverables by Sykdomspulsen’s 8
+members:</p>
+<ul>
+<li><p>13 R packages (splverse) that help with task management, data
+cleaning and manipulation, modeling and prediction and
+reporting,</p></li>
+<li><p>over 1000 automated daily COVID-19 reports with near real-time
+analysis and results,</p></li>
+<li><p>one shiny website with hundreds of regular users (municipal
+public health officers), covering indicators of interest such as Covid
+hospitalisation and deaths, influenza, GP consultations on infectious
+diseases, mortality and mobility.</p></li>
+</ul>
+<p>All these deliverables are generated with R, and are completely free
+(although we still need to pay for <a
+href="https://www.rstudio.com/products/workbench/">Rstudio workbench</a>
+and the servers!). Here I will explain how the four tidyverse principles
+make Sykdomspulsen team succeed as a small data science team with
+limited time and resources.</p>
+<h4 id="human-centered-code-encourages-teamwork">Human centered code
+encourages teamwork</h4>
+<p>Sykdomspulsen team is made of talented people with different skill
+sets: statistics, programming, web design and domain knowledge in
+medicine and public health. The level of expertise in R (or programming
+in general) differ, yet everyone is able to contribute in our
+deliverables. Task decomposition is crucial: people who can handle the
+more R-demanding tasks could focus on data cleaning and analysis, while
+the user interface (UI) tasks can be taken by administrative team
+members. For example, our coordinator plays a key role in updating the
+shiny website to communicate important messages with local municipal
+public health officials.</p>
+<p>Needless to say, this also enables an inclusive and diverse team
+where people can contribute to the team with their own strength.</p>
+<h4 id="consistent-coding-style">Consistent coding style</h4>
+<p>When we develop code, we keep the code readability in mind and try to
+write comments as much as we can. Since we want to make it
+comprehensible to everyone, we use explicit names for the functions and
+datasets. It can be long sometimes, but we believe that it is more
+important to let people understand the tasks at a glance instead of
+checking up abbreviations. We have our own <a
+href="https://docs.sykdomspulsen.no/spltidy/articles/splfmt_rts_data_v1.html">style
+guide</a> and use it throughout our tasks.</p>
+<h4 id="composable-task-development">Composable task development</h4>
+<p>Sykdomspulsen has many deliverables, and they are complex. For
+example, in each one of the Covid daily reports, there are different
+outcome indicators (e.g. hospitalization numbers, cases, risk levels,
+vaccination by different doses and many more), at different geolocations
+(national, county level, municipality level), for different age groups
+and for different time (daily or weekly). The national report is 24
+pages and around 30 tables and graphs. To navigate one report is already
+quite some work, try do that for all configurations!</p>
+<p>Divide and conquer. Complex tasks can, and should be decomposed into
+smaller chunks. One obvious benefit is that we can use <a
+href="https://airflow.apache.org/">Airflow</a> to schedule the tasks
+dedicated to data import, data cleaning, computation, result compilation
+and graph making. Another benefit is parallelization. When time is
+limited, this could be very useful!</p>
+<h2 id="in-summary">In summary</h2>
+<p>Following the Tidyverse principles has made the Sykdomspulsen team
+efficient, organized and high performing. Fundamentally, putting its
+human member at the core of a team makes all the difference.</p>
 <div class="sourceCode" id="cb1"><pre
 class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
