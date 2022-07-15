@@ -58,7 +58,7 @@ All these deliverables are generated with R, and are completely free (although w
 
 
 
-#### Human centered code encourages teamwork
+### Human centered code encourages teamwork
 
 Sykdomspulsen team is made of talented people with different skill sets: statistics, programming, web design and domain knowledge in medicine and public health. The level of expertise in R (or programming in general) differ, yet everyone is able to contribute in our deliverables. Task decomposition is crucial: people who can handle the more R-demanding tasks could focus on data cleaning and analysis, while the user interface (UI) tasks can be taken by administrative team members. For example, our coordinator plays a key role in updating the shiny website to communicate important messages with local municipal public health officials. 
 
@@ -67,13 +67,13 @@ Needless to say, this also enables an inclusive and diverse team where people ca
 
 
 
-#### Consistent coding style
+### Consistent coding style
 
 When we develop code, we keep the code readability in mind and try to write comments as much as we can. Since we want to make it comprehensible to everyone, we use explicit names for the functions and datasets. It can be long sometimes, but we believe that it is more important to let people understand the tasks at a glance instead of checking up abbreviations. We have our own [style guide](https://docs.sykdomspulsen.no/spltidy/articles/splfmt_rts_data_v1.html) and use it throughout our tasks.  
 
 
 
-#### Composable task development
+### Composable task development
 
 Sykdomspulsen has many deliverables, and they are complex. For example, in each one of the Covid daily reports, there are different outcome indicators (e.g. hospitalization numbers, cases, risk levels, vaccination by different doses and many more), at different geolocations (national, county level, municipality level), for different age groups and for different time (daily or weekly). The national report is 24 pages and around 30 tables and graphs. To navigate one report is already quite some work, try do that for all configurations!
 
