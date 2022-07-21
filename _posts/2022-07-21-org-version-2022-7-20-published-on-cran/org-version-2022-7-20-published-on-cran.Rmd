@@ -21,11 +21,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Changes since last version
 
-The R-package "org" (version 2022.7.20) has been published on [CRAN](https://cran.r-project.org/web/packages/org/index.html). "org" is a part of the [splverse](https://docs.sykdomspulsen.no/packages.html), a set of R packages developed to help solve problems that frequently occur when performing infectious disease surveillance.
-
-A significant breaking change is that `org::initialize_project` now takes in `env` as an argument (the environment into which the functions will be sourced).
-
-It is now recommended to include `env = .GlobalEnv` into the function call.
+The R-package "org" (version 2022.7.20) has been published on [CRAN](https://cran.r-project.org/web/packages/org/index.html). "org" is a part of the [splverse](https://docs.sykdomspulsen.no/packages.html), a set of R packages developed to help solve problems that frequently occur when performing infectious disease surveillance. A significant breaking change is that `org::initialize_project` now takes in `env` as an argument (the environment into which the functions will be sourced). It is now recommended to include `env = .GlobalEnv` into the function call.
 
 <aside>
 ```{r}

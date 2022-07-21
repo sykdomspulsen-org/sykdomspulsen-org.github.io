@@ -21,18 +21,16 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Changes since last version
 
-The R-package "plnr" (version 2022.6.8) has been published on [CRAN](https://cran.r-project.org/web/packages/plnr/index.html). "plnr" is a part of the [splverse](https://docs.sykdomspulsen.no/packages.html), a set of R packages developed to help solve problems that frequently occur when performing infectious disease surveillance.
-
-"plnr" has two vignettes that briefly show the mental model behind "plnr".
-
-- [Introduction to plnr](https://cran.r-project.org/web/packages/plnr/vignettes/plnr.html)
-- [Adding Analyses to a Plan](https://cran.r-project.org/web/packages/plnr/vignettes/adding_analyses.html)
+The R-package "plnr" (version 2022.6.8) has been published on [CRAN](https://cran.r-project.org/web/packages/plnr/index.html). "plnr" is a part of the [splverse](https://docs.sykdomspulsen.no/packages.html), a set of R packages developed to help solve problems that frequently occur when performing infectious disease surveillance. "plnr" has two vignettes that briefly show the mental model behind "plnr":
 
 <aside>
 ```{r}
 knitr::include_graphics("plnr.png")
 ```
 </aside>
+
+- [Introduction to plnr](https://cran.r-project.org/web/packages/plnr/vignettes/plnr.html)
+- [Adding Analyses to a Plan](https://cran.r-project.org/web/packages/plnr/vignettes/adding_analyses.html)
 
 ## Concept 
 
