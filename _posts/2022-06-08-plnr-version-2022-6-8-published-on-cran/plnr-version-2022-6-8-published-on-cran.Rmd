@@ -34,15 +34,6 @@ knitr::include_graphics("plnr.png")
 ```
 </aside>
 
-```
-org::initialize_project(
-  env = .GlobalEnv,
-  home = "/git/analyses/2019/analysis3/",
-  results = "/dropbox/analyses_results/2019/analysis3/"
-  raw = "/data/analyses/2019/analysis3/"
-)
-```
-
 ## Concept 
 
 +----------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
