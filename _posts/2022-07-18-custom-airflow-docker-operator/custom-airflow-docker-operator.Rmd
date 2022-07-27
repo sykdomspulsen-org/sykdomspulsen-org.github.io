@@ -21,7 +21,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## What do we want?
 
-Sykdomspulsen Analytic uses [Airflow](https://airflow.apache.org/) to schedule its tasks.
+Sykdomspulsen Analytics uses [Airflow](https://airflow.apache.org/) to schedule its tasks.
 
 ```{r, layout="l-body", out.width = "100%"}
 knitr::include_graphics("airflow.png")
