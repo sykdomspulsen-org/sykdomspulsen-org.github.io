@@ -1,0 +1,241 @@
+[
+  {
+    "path": "posts/2022-07-27-auto-updating-docker-compose-images/",
+    "title": "Auto-Updating Docker-Compose Images (Using Podman)",
+    "description": "Through some simple python coding and systemd services, we have successfully created an automatic update mechanism for Docker-Compose with a Podman backend.",
+    "author": [
+      {
+        "name": "Richard Aubrey White",
+        "url": "https://rwhite.no"
+      }
+    ],
+    "date": "2022-07-27",
+    "categories": [],
+    "contents": "\nWhat do we want?\nSykdomspulsen Analytics uses Docker-Compose with a Podman\nbackend.\nWe use GoCD as the CI/CD tool to build\nnew images, however, deployment of these images is a difficult\nissue.\nWatchtower is a\nprocess for automating Docker container base image updates, however, we\nencountered issues\nimplementing it with a Podman backend.\nWith our particular setup, each Docker-Compose file is handled via\nsystemd. We need a way to monitor if a new image has been pushed to\nlocalhost, which is not consistent with the images\ncurrently in use.\nDetails\n/etc/systemd/system/airflow.service is the systemd\nfile that launches the Docker-Compose airflow file. We make sure that\nthe service name is the same as the Docker-Compose folder\n(e.g. airflow.service and\n/home/XXXX/images/docker-compose/airflow).\n[Unit]\nDescription=Airflow with Docker Compose\nRequires=podman.service\nAfter=podman.service\n\n[Service]\nType=oneshot\nRemainAfterExit=true\nWorkingDirectory=/home/XXXX/images/docker-compose/airflow\nEnvironment=\"TMPDIR=/root/tmp\"\nExecStartPre=/bin/sh -c \"systemctl set-environment HOSTNAME=$(hostname)\"\nExecStart=/usr/local/bin/docker-compose up -d\nExecStop=/usr/local/bin/docker-compose down\n\n[Install]\nWantedBy=multi-user.target\n/etc/systemd/system/composemonitor.service is the\nsystemd file that runs the python script\n/home/XXXX/images/composemonitor/composemonitor.py.\n[Unit]\nDescription=Monitoring Docker Compose\nRequires=podman.service\nAfter=podman.service\n\n[Service]\nType=notify\nRemainAfterExit=true\nWorkingDirectory=/home/XXXX/images/composemonitor\nEnvironment=PYTHONUNBUFFERED=1\nExecStart=/usr/bin/python -u composemonitor.py\nRestart=on-failure\n\n[Install]\nWantedBy=multi-user.target\n/home/XXXX/images/composemonitor/composemonitor.py\nwhich compares the images currently in use with the images in\nsudo podman images. If these are not consistent, then the\nservice (e.g. airflow.service) is restarted.\nIt performs this check for the services:\nairflow.service, gocd.service, and\nsplworkbench.service.\nif __name__ == '__main__':\n    import subprocess\n    import re\n    import datetime\n    import time\n    import systemd.daemon\n    \n    systemd.daemon.notify('READY=1')\n    \n    service_names = [\"airflow\", \"gocd\", \"splworkbench\"]\n    \n    def check_service(service_name):\n        print(\"--------\")\n        print(datetime.datetime.now().strftime(\"%Y-%m-%d %H:%M:%S\"), \"Checking service: \" + service_name)\n        \n        containers = subprocess.run([\"podman\", \"ps\", \"-a\", \"--format\", \"{{.Names}} {{.Image}} {{.ImageID}}\"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)\n        containers = containers.stdout.decode('utf-8')\n        containers = containers.split()\n        \n        number_containers = round(len(containers)/3)\n        c_container_name = containers[0:len(containers):3]\n        c_image_name = containers[1:len(containers):3]\n        c_image_id = containers[2:len(containers):3]\n        \n        index = [i for i, item in enumerate(c_container_name) if re.search(\"^\" + service_name + \"_\", item)]\n        \n        c_container_name = [c_container_name[i] for i in index]\n        c_image_name = [c_image_name[i] for i in index]\n        c_image_id = ['^'+c_image_id[i] for i in index]\n        \n        needs_update = False\n        for i in range(len(c_image_id)):\n            image = subprocess.run([\"podman\", \"images\", c_image_name[i], \"--format\", \"{{.Id}}\"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)\n            image_id = image.stdout.decode('utf-8')\n            \n            blah = re.search(c_image_id[i],image_id)\n            if blah is None:\n                print(datetime.datetime.now().strftime(\"%Y-%m-%d %H:%M:%S\"), c_container_name[i] + \" is out of date\")\n                needs_update = True\n            else:\n                print(datetime.datetime.now().strftime(\"%Y-%m-%d %H:%M:%S\"), c_container_name[i] + \" is up-to-date\")\n        \n        if needs_update:\n            print(datetime.datetime.now().strftime(\"%Y-%m-%d %H:%M:%S\"), \"Restarting service \" + service_name)\n            containers = subprocess.run([\"systemctl\", \"restart\", service_name+\".service\"])\n        else:\n            print(datetime.datetime.now().strftime(\"%Y-%m-%d %H:%M:%S\"), \"Service \" + service_name + \" is up-to-date, no action taken\")\n            \n        time.sleep(5)\n    \n    while True:\n        for service_name in service_names:\n            check_service(service_name)\n        \n        print(\"--------\")\n        print(datetime.datetime.now().strftime(\"%Y-%m-%d %H:%M:%S\"), \"Sleeping for 60 seconds\")\n        \n        time.sleep(60)\nWhen running sudo podman images we see that the ID for\nlocalhost/airflow:latest is\n75b3ca9b3ca2.\n\n\n\nWe then update the airflow image, with new ID\n4942b104ded1.\n\n\n\nWe check sudo systemctl status composemonitor.service\nand see that it has detected that the airflow images are out-of-date.\nThe service airflow.service is then rebooted, and the\nairflow images in use are updated.\n\n\n\nWe see that sudo podman ps -a shows that the airflow\ncontainers have recently been restarted.\n\n\n\nConclusion\nThrough some simple python coding and systemd services, we have\nsuccessfully created an automatic update mechanism for Docker-Compose\nwith a Podman backend.\n\n\n\n",
+    "preview": "posts/2022-07-27-auto-updating-docker-compose-images/build_1.png",
+    "last_modified": "2022-07-27T09:21:12+02:00",
+    "input_file": {},
+    "preview_width": 1474,
+    "preview_height": 639
+  },
+  {
+    "path": "posts/2022-07-21-org-version-2022-7-20-published-on-cran/",
+    "title": "R-Package \"org\" (version 2022.7.20) Published on CRAN",
+    "description": "\"org\" is a system to help you organize projects. Most analyses have three (or more) main sections: code, results, and data, each with different requirements (version control/sharing/encryption). You provide folder locations and 'org' helps you take care of the details.",
+    "author": [
+      {
+        "name": "Richard Aubrey White",
+        "url": "https://rwhite.no"
+      }
+    ],
+    "date": "2022-07-21",
+    "categories": [],
+    "contents": "\nChanges since last version\nThe R-package “org” (version 2022.7.20) has been published on CRAN.\n“org” is a part of the splverse, a set\nof R packages developed to help solve problems that frequently occur\nwhen performing infectious disease surveillance. A significant breaking\nchange is that org::initialize_project now takes in\nenv as an argument (the environment into which the\nfunctions will be sourced). It is now recommended to include\nenv = .GlobalEnv into the function call.\n\n\n\norg::initialize_project(\n  env = .GlobalEnv,\n  home = \"/git/analyses/2019/analysis3/\",\n  results = \"/dropbox/analyses_results/2019/analysis3/\"\n  raw = \"/data/analyses/2019/analysis3/\"\n)\nConcept\nThe concept behind org is fairly simple - most analyses\nhave three main sections:\ncode\nresults\ndata\nYet each of these sections have extremely different requirements.\nCode should:\nBe version controlled\nBe publically accessible\nHave 1 analysis pipeline that logically and sequentially details all\nsteps of the data cleaning, analysis, and result generation\nResults should:\nBe immediately shared with close collaborators\nHave each set of results saved and accessible, so that you can see\nhow your results have changed over time (i.e. “if we run the code today,\ndo we get similar results to yesterday?”)\nData should:\nBe encrypted (if sensitive)\nNot stored on the cloud (if sensitive)\n\n\n\n",
+    "preview": "posts/2022-07-21-org-version-2022-7-20-published-on-cran/org.png",
+    "last_modified": "2022-07-21T08:28:05+02:00",
+    "input_file": {},
+    "preview_width": 1310,
+    "preview_height": 1517
+  },
+  {
+    "path": "posts/2022-07-18-custom-airflow-docker-operator/",
+    "title": "Custom Airflow Docker Operator (Poor-Man's Kubernetes)",
+    "description": "Airflow is a platform to programmatically author, schedule, and monitor workflows data. Operators are the main building blocks that encapsulate logic to do a unit of work. We have created a custom Airflow operator that 1) checks a remote YAML file and 2) then takes a decision to do one of two actions. This allows us to create a \"poor-man's Kubernetes\".",
+    "author": [
+      {
+        "name": "Richard Aubrey White",
+        "url": "https://rwhite.no"
+      }
+    ],
+    "date": "2022-07-18",
+    "categories": [],
+    "contents": "\nWhat do we want?\nSykdomspulsen Analytics uses Airflow to schedule its\ntasks.\n\n\n\nAirflow and Sykdomspulsen Analytics’ tasks can be run on Kubernetes.\nThis can be seen in the below graph, where one Airflow implementation\ndispatches tasks to both Server 1 and Server 2. However, with such a\nsmall team there is always the risk of something going wrong with a\ncomplicated Kubernetes setup. It is therefore preferable to have a\nfailback solution that is independent of Kubernetes. We have achieved\nthis by installing a duplicate Airflow system on each of the servers\nusing Docker-compose. Each Docker-compose Airflow instance can dispatch\ntasks to its own server.\n\n\n\nHowever, this means that we have anywhere between 1 to 3 duplicate\nAirflow DAGs running at any time. All of these will be reading and\nwriting to the same databases. This is obviously not desirable.\nWe must have only one Airflow instance operative at any\ntime.\nHow do we get it?\nIt is not easy to seamlessly turn on and turn off multiple Airflow\ninstances. We can, however, alter the operators inside each Airflow\ninstance to be functional or non-functional.\nIt is for this reason that we developed a custom\nAirflow Docker operator. This custom Airflow Docker operator:\nChecks an external YAML config file\n(https://raw.githubusercontent.com/USERNAME/REPO/main/airflow-dag-on-server.yaml)\nto see which server each DAG should be run on.\nChecks to see if this server is the correct one.\nIf this is not the correct server, change the command to be\nexcecuted to: echo NOT CORRECT SERVER.\nExecutes the command inside the Docker container.\nDetails\nhttps://raw.githubusercontent.com/USERNAME/REPO/main/airflow-dag-on-server.yaml\n---\ndag_1: \"server-1.tld\"\ndocker-compose.yml (If using Podman)\n  volumes:\n    - /var/run/podman/podman.sock:/var/run/docker.sock\n  environment:\n    HOST_HOSTNAME: $HOSTNAME\n/opt/airflow/plugins/operators/sc_operators.py\naccesses the environmental variable HOST_HOSTNAME that is\npassed through from docker-compose.yml.\nimport os\nimport requests\nimport time\nimport yaml\n\nfrom airflow.operators.docker_operator import DockerOperator\n\nclass SCDockerOperator(DockerOperator):\n    def __init__(self, **kwargs) -> None:\n        super().__init__(**kwargs)\n\n    def execute(self, context):\n        response = requests.get(\n            \"https://raw.githubusercontent.com/USERNAME/REPO/main/airflow-dag-on-server.yaml\",\n            headers = {\"Cache-Control\": \"no-cache\"}\n        )\n        unparsed_data = response.text\n    \n        data = yaml.safe_load(unparsed_data)\n        \n        print(data)\n        print(self.dag.dag_id)\n        \n        if self.dag.dag_id not in data:\n            self.command = '''bash -c \"echo NOT CORRECT SERVER\"'''\n        elif data[self.dag.dag_id] != os.getenv(\"HOST_HOSTNAME\"):\n            self.command = '''bash -c \"echo NOT CORRECT SERVER\"'''\n        else:\n            print(\"OK\")\n        \n        time.sleep(5)\n        retval = super().execute(context)\n        return retval\n/opt/airflow/dags/dag_1.py\nimport random\nfrom operators.sc_operators import SCDockerOperator\n\ntask = SCDockerOperator(\n    task_id='my_task',\n    image='localhost/splanalytics:latest',\n    container_name= 'my_task_' + str(random.randint(10,100000)),\n    api_version='auto',\n    auto_remove=True,\n    command=cmd,\n    docker_url='unix://var/run/docker.sock',\n    network_mode='bridge',\n    privileged = True,\n    dag=dag\n)\nConclusion\nBy editing\nhttps://raw.githubusercontent.com/USERNAME/REPO/main/airflow-dag-on-server.yaml\nwe can quickly choose which server will execute the desired task. This\nis an easy way to manually control identical installations of Airflow as\na failback system.\n\n\n\n",
+    "preview": "posts/2022-07-18-custom-airflow-docker-operator/airflow.png",
+    "last_modified": "2022-07-27T08:14:53+02:00",
+    "input_file": {},
+    "preview_width": 1897,
+    "preview_height": 753
+  },
+  {
+    "path": "posts/2022-07-14-tidyverse/",
+    "title": "Tidyverse principles at Sykdomspulsen",
+    "description": "At Sykdomspulsen we adopt the Tidyverse principles.",
+    "author": [
+      {
+        "name": "Chi Zhang",
+        "url": "https://www.fhi.no"
+      }
+    ],
+    "date": "2022-07-14",
+    "categories": [],
+    "contents": "\nSykdomspulsen’s deliverables (reports and website) for evidence-based\ndecision making during the COVID-19 pandemic, and it is crucial that the\ncode is high quality, and is able to be developed at a fast pace. The\nSykdomspulsen team members come from a variety of disciplines, ranging\nfrom statistics, epidemiology, ecology, medicine and computer science.\nWe are a small team, and oftentimes it is necessary to take over tasks\nfrom another person to make timely deliveries. In this post I will talk\nabout how the Sykdomspulsen team follow the tidyverse principles for\nfast and high quality task development.\nTidyverse design principles\nThe unifying\nprinciples introduced by the tidyverse team serve the purpose of\nmaking code easier for the human doing the data analysis tasks. There\nare four core principles:\nHuman centered: code should serve the human\nanalysts, especially that R is mostly used by non-programmers. Ease to\nuse is key.\nConsistent: code style should be consistent, so\nthat one only needs to learn one style and it applies\neverywhere.\nComposable: a complex task should be decomposed\ninto smaller, independent tasks.\nInclusive: the tidyverse community is welcoming\nand friendly, which creates a good learning environment.\nThese four principles do not live without one another. Human is the\ncore of these principles, where developing code that are consistent,\ncomposable would make it easier to develop code and troubleshoot.\nCreating an inclusive community makes every member in it benefit from\neach other.\nTidyverse principle at\nSykdomspulsen\nHere are some of the deliverables by Sykdomspulsen’s 8\nmembers:\n13 R packages (splverse) that help with task management, data\ncleaning and manipulation, modeling and prediction and\nreporting,\nover 1000 automated daily COVID-19 reports with near real-time\nanalysis and results,\none shiny website with hundreds of regular users (municipal\npublic health officers), covering indicators of interest such as Covid\nhospitalisation and deaths, influenza, GP consultations on infectious\ndiseases, mortality and mobility.\nAll these deliverables are generated with R, and are completely free\n(although we still need to pay for Rstudio workbench\nand the servers!). Here I will explain how the four tidyverse principles\nmake Sykdomspulsen team succeed as a small data science team with\nlimited time and resources.\nHuman centered code\nencourages teamwork\nSykdomspulsen team is made of talented people with different skill\nsets: statistics, programming, web design and domain knowledge in\nmedicine and public health. The level of expertise in R (or programming\nin general) differ, yet everyone is able to contribute in our\ndeliverables. Task decomposition is crucial: people who can handle the\nmore R-demanding tasks could focus on data cleaning and analysis, while\nthe user interface (UI) tasks can be taken by administrative team\nmembers. For example, our coordinator plays a key role in updating the\nshiny website to communicate important messages with local municipal\npublic health officials.\nNeedless to say, this also enables an inclusive and diverse team\nwhere people can contribute to the team with their own strength.\nConsistent coding style\nWhen we develop code, we keep the code readability in mind and try to\nwrite comments as much as we can. Since we want to make it\ncomprehensible to everyone, we use explicit names for the functions and\ndatasets. It can be long sometimes, but we believe that it is more\nimportant to let people understand the tasks at a glance instead of\nchecking up abbreviations. We have our own style\nguide and use it throughout our tasks.\nComposable task development\nSykdomspulsen has many deliverables, and they are complex. For\nexample, in each one of the Covid daily reports, there are different\noutcome indicators (e.g. hospitalization numbers, cases, risk levels,\nvaccination by different doses and many more), at different geolocations\n(national, county level, municipality level), for different age groups\nand for different time (daily or weekly). The national report is 24\npages and around 30 tables and graphs. To navigate one report is already\nquite some work, try do that for all configurations!\nDivide and conquer. Complex tasks can, and should be decomposed into\nsmaller chunks. One obvious benefit is that we can use Airflow to schedule the tasks\ndedicated to data import, data cleaning, computation, result compilation\nand graph making. Another benefit is parallelization. When time is\nlimited, this could be very useful!\nIn summary\nFollowing the Tidyverse principles has made the Sykdomspulsen team\nefficient, organized and high performing. Fundamentally, putting its\nhuman member at the core of a team makes all the difference.\n\n\n\n",
+    "preview": {},
+    "last_modified": "2022-07-21T07:48:20+02:00",
+    "input_file": {}
+  },
+  {
+    "path": "posts/2022-07-12-splverse/",
+    "title": "From data to reports: real-time surveillance with splverse",
+    "description": "In this post we demonstrate how we use splverse to carry out real-time public health surveillance.",
+    "author": [
+      {
+        "name": "Chi Zhang",
+        "url": "https://www.fhi.no"
+      }
+    ],
+    "date": "2022-07-12",
+    "categories": [],
+    "contents": "\n(introduction to the topic)\nReal-time public health\nsurveillance\n\n\n\n",
+    "preview": {},
+    "last_modified": "2022-07-14T11:33:15+02:00",
+    "input_file": {}
+  },
+  {
+    "path": "posts/2022-07-13-automation/",
+    "title": "Automated reporting in real-time public health surveillance",
+    "description": "In this post we introduce how Sykdomspulsen uses automated reports to carry out surveillance tasks.",
+    "author": [
+      {
+        "name": "Chi Zhang",
+        "url": "https://www.fhi.no"
+      }
+    ],
+    "date": "2022-07-12",
+    "categories": [],
+    "contents": "\n(introduction to the topic)\nAutoreports\n\n\n\n",
+    "preview": {},
+    "last_modified": "2022-07-21T07:48:20+02:00",
+    "input_file": {}
+  },
+  {
+    "path": "posts/2022-06-08-plnr-version-2022-6-8-published-on-cran/",
+    "title": "R-Package \"plnr\" (version 2022.6.8) Published on CRAN",
+    "description": "\"plnr\" is a system to plan analyses within the mental model where you have one (or more) datasets and want to run either A) the same function multiple times with different arguments, or B) multiple functions. This is appropriate when you have multiple strata (e.g. locations, age groups) that you want to apply the same function to, or you have multiple variables (e.g. exposures) that you want to apply the same statistical method to, or when you are creating the output for a report and you need multiple different tables or graphs.",
+    "author": [
+      {
+        "name": "Richard Aubrey White",
+        "url": "https://rwhite.no"
+      }
+    ],
+    "date": "2022-06-08",
+    "categories": [],
+    "contents": "\nChanges since last version\nThe R-package “plnr” (version 2022.6.8) has been published on CRAN.\n“plnr” is a part of the splverse, a set\nof R packages developed to help solve problems that frequently occur\nwhen performing infectious disease surveillance. “plnr” has two\nvignettes that briefly show the mental model behind “plnr”:\n\n\n\nIntroduction\nto plnr\nAdding\nAnalyses to a Plan\nConcept\nBroad technical terms\n\nObject\nDescription\nargset\nA named list containing a set of arguments.\nanalysis\nThese are the fundamental units that are scheduled in\nplnr:\n1 argset\n1 (action) function that takes two arguments\ndata (named list)\nargset (named list)\n\n\nplan\nThis is the overarching “scheduler”:\n1 data pull\n1 list of analyses\n\nDifferent types of plans\n\nPlan Type\nDescription\nSingle-function plan\nSame action function applied multiple times with different argsets\napplied to the same datasets.\nMulti-function plan\nDifferent action functions applied to the same datasets.\nPlan Examples\n\nPlan Type\nExample\nSingle-function plan\nMultiple strata (e.g. locations, age groups) that you need to apply\nthe same function to to (e.g. outbreak detection, trend detection,\ngraphing).\nSingle-function plan\nMultiple variables (e.g. multiple outcomes, multiple exposures) that\nyou need to apply the same statistical methods to (e.g. regression\nmodels, correlation plots).\nMulti-function plan\nCreating the output for a report (e.g. multiple different tables and\ngraphs).\nIn brief, we work within the mental model where we have one (or more)\ndatasets and we want to run multiple analyses on these datasets. These\nmultiple analyses can take the form of:\nSingle-function plans: One action function\n(e.g. table_1) called multiple times with different argsets\n(e.g. year=2019, year=2020).\nMulti-function plans: Multiple action functions\n(e.g. table_1, table_2) called multiple times\nwith different argsets (e.g. table_1:\nyear=2019, while for table_2:\nyear=2019 and year=2020)\nBy demanding that all analyses use the same data sources we can:\nBe efficient with requiring the minimal amount of data-pulling (this\nonly happens once at the start).\nBetter enforce the concept that data-cleaning and analysis should be\ncompletely separate.\nBy demanding that all analysis functions only use two arguments\n(data and argset) we can:\nReduce mental fatigue by working within the same mental model for\neach analysis.\nMake it easier for analyses to be exchanged with each other and\niterated on.\nEasily schedule the running of each analysis.\nBy including all of this in one Plan class, we can\neasily maintain a good overview of all the analyses (i.e. outputs) that\nneed to be run.\n\n\n\n",
+    "preview": "posts/2022-06-08-plnr-version-2022-6-8-published-on-cran/plnr.png",
+    "last_modified": "2022-07-21T08:28:47+02:00",
+    "input_file": {},
+    "preview_width": 1310,
+    "preview_height": 1517
+  },
+  {
+    "path": "posts/2022-01-24-new-course-longitudinal-analysis-for-surveillance/",
+    "title": "New Course: Longitudinal Analysis for Surveillance",
+    "description": "Sykdomspulsen has published a short course that teaches students to run \"normal regressions\" in situations where the data structure would ordinarily prohibit you from running regression models. These situations mostly pertain to clusters of correlated data.",
+    "author": [
+      {
+        "name": "Richard Aubrey White",
+        "url": "https://rwhite.no"
+      }
+    ],
+    "date": "2022-01-24",
+    "categories": [],
+    "contents": "\nYou can find the course “Longitudinal Analysis for Surveillance” in\nthe Learning page.\n\n\n\nWhen dealing with longitudinal data, there are two kinds of analyses\nthat can be performed:\n“Time series” analyses generally deal with one variable. The aim is\nto then predict the future only using the previous observations. A\ncommon example would be to predict tomorrow’s temperature, using today’s\nand yesterday’s temperature as exposures. We will not be\nfocusing on these kinds of analyses in this course.\n“Regression analyses” are very similar to ordinary regressions that\nyou have been working with for many years. The only difference is that\nthey have more advanced data structures that your current methods cannot\nhandle. For example, if you want to see how the number of tuberculosis\npatients (outcome) is affected by the number of immigrants to Norway\n(exposure) over a 20 year period, then the number of patients in each\nyear might be associated with each other, which might break assumptions\nof the regression models that you normally use (independent residuals).\nTo account for the advanced structure of the data (correlation between\ndifferent years) we will use more advanced regression techniques.\nThis will be the focus of the course.\n\n\n\n",
+    "preview": "posts/2022-01-24-new-course-longitudinal-analysis-for-surveillance/longitudinal-analysis-for-surveillance.png",
+    "last_modified": "2022-07-14T12:20:22+02:00",
+    "input_file": {},
+    "preview_width": 2475,
+    "preview_height": 3300
+  },
+  {
+    "path": "posts/2022-01-11-new-course-which-stats-method/",
+    "title": "New Course: Which Stats Method?",
+    "description": "Sykdomspulsen has published a short course that provides a basic overview of general statistical methodology that can be useful in the areas of infectious diseases, environmental medicine, and labwork. By the end of this course, students will be able to identify appropriate statistical methods for a variety of circumstances.",
+    "author": [
+      {
+        "name": "Richard Aubrey White",
+        "url": "https://rwhite.no"
+      }
+    ],
+    "date": "2022-01-11",
+    "categories": [],
+    "contents": "\nYou can find the course “Which Stats Method” in the Learning page.\nThis course will not teach students how to implement these\nstatistical methods. The aim of this course is to enable the student to\nidentify which methods are required for their study, allowing the\nstudent to identify their needs for subsequent methods courses,\nself-learning, or external help.\nYou should take this course if you are one of the following:\nHave experience with applying statistical methods, but are sometimes\nconfused or uncertain as to whether or not you have selected the correct\nmethod.\nDo not have experience with applying statistical methods, and would\nlike to get an overview over which methods are applicable for your\nprojects so that you can then undertake further studies in these\nareas.\n\n\n\nThis course covers the following scenarios:\nIdentifying continuous, categorical, count, and censored\nvariables.\nIdentifying exposure and outcome variables.\nIdentifying when t-tests (paired and unpaired) should be used.\nIdentifying when non-parametric t-test equivalents should be\nused.\nIdentifying when ANOVA should be used.\nIdentifying when linear regression should be used.\nIdentifying the similarities between t-tests, ANOVA, and\nregression.\nIdentifying when logistic regression models should be used.\nIdentifying when Poisson/negative binomial and cox regression models\nshould be used.\nIdentifying when chi-squared/fisher’s exact test should be\nused.\nIdentifying when data does not have any dependencies (i.e. all\nobservations are independent of each other) versus when data has\ncomplicated dependencies (i.e. longitudinal data, matched data, multiple\ncohorts).\nIdentifying when mixed effects regression models should be\nused.\nIdentifying when conditional logistic regression models should be\nused.\n\n\n\n",
+    "preview": "posts/2022-01-11-new-course-which-stats-method/reference.png",
+    "last_modified": "2022-07-14T12:20:07+02:00",
+    "input_file": {},
+    "preview_width": 1344,
+    "preview_height": 1344
+  },
+  {
+    "path": "posts/2021-11-18-poster-prize-for-sykdomspulsen/",
+    "title": "Sykdomspulsen Receives Prize for Best Poster",
+    "description": "Sykdomspulsen received the prize for best poster at Helse- og Kvalitetsregisterkonferansen 2021.",
+    "author": [
+      {
+        "name": "Gry Marysol Grøneng",
+        "url": {}
+      }
+    ],
+    "date": "2021-11-18",
+    "categories": [],
+    "contents": "\nOf the 47 posters at the conference, it was Sykdomspulsen’s poster “Sykdomspulsen - An exciting and forward-looking infrastructure and website for the real-time surveillance of Covid-19, other infections, and deaths” that received the prize for “Best Poster”.\nThis prize is important for us as a small acknowledgement for all the extra hours the Sykdomspulsen team have worked throughout the pandemic. We greatly appreciate this, says project leader Gry Marysol Grøneng.\nWe are the first in FHI who have a totally automatic system that takes in data, analyses it, and delivers reports, tables, and maps, in addition to delivering data to GitHub and APIs for websites and the modelling group, while also running our own interactive website. All of this is done in a secure, scalable, and highly technical infrastructure without a single manual process. It is only six people who manage all of this, from the changes and inclusion of new data sources, maintainance of the infrastructure and website, improvements, and user support.\n\n\n\nAwarding of the prize\n\n\nPoster\n\n\n\nconference_poster.pdf\nHandout\n\n\n\n\n\n\nconference_handout.pdf\nData sources\nThe infrastructure takes in data from more than 15 data sources. The most of which update on a daily basis:\nMSIS (notifiable disease registry)\nMSIS lab database\nSYSVAK (vaccination registry)\nNIPaR (Norwegian intensive and pandemic registry)\nDÅR (Norwegian cause of death Registry)\nVaccine distribution\nSymptometer\nModelling results\nKUHR (sKUHR) (control and disbursement of health payments)\nNorMOMO (Norwegian mortality monitoring)\nThe Veterinary Institute\nSSB data\nThe Meteorological Institute\nNordic Covid-19 data\nTelenor data\nOthers\nAnalyses\nSykdomspulsen runs over 500 000 automatic analyses every day. Some of these analyses are heavy regression analyses, where a model is run multiple times over age groups and geographical locations. The important part is that these analyses give us the ability to identify increases in infection levels, which allows appropriate interventions to be enacted as quickly as possible.\nDeliverables\nThe deliverables span a large range from simple graphs to large reports. This is possible due to the etreme flexibility of our infrastructure (see the “Infrastructure” part for more information).\nEvery day Sykdomspulsen delivers:\nCovid-19 daily reports before breakfast (more than 500 every day)\nUpdates of data to fhi.no\nUpdates of data to the website “Sykdomspulsen for kommunehelsetjenesten” (Sykdomspulsen for the municipal health authorities)\nUpdates of data to the modelling group in FHI\nUpdates of the data on GitHub (machine-readable data that media houses such as NTB, VG and Aftenposten use)\nTables with Covid-19 vaccination summary statistics for the vaccination program\nCalculations, tables, graphs, and maps to the influenza team\nSykdomspulsen for the municipal health authorities - website\nWe also run an interactive website from A to Z. Sykdomspulsen has built up the technical infrastructure, ensured automatic daily updates, implemented the webdesign, graphs, text, and does all user support. This website is only for municipal health authorities, county governors, infectious disease doctors, regional health authorities, and FHI. It currently has approximately 350 registered users, of which approximately 100 use it daily.\nInfrastructure\nSykdomspulsen’s infrastructure is unique because it can effectively manage large quantites of data on a daily basis in an extremely flexible manner. The infrastructure contains approximately 2 000 000 000 rows of data (~1TB) spread across 1000 database tables. The infrastructure is based on R, which makes it very flexible, and Kubernetes, which makes it very robust and easily scalable. In addition the infrastructure is tightly locked-down with access controls and encryption.\n\n\n\n",
+    "preview": "posts/2021-11-18-poster-prize-for-sykdomspulsen/screenshot.png",
+    "last_modified": "2021-11-26T05:12:11+01:00",
+    "input_file": {},
+    "preview_width": 2044,
+    "preview_height": 2554
+  },
+  {
+    "path": "posts/2021-11-17-posterpris-til-sykdomspulsen/",
+    "title": "Posterpris til Sykdomspulsen",
+    "description": "Sykdomspulsen fikk posterpris på Helse- og Kvalitetsregisterkonferansen 2021.",
+    "author": [
+      {
+        "name": "Gry Marysol Grøneng",
+        "url": {}
+      }
+    ],
+    "date": "2021-11-17",
+    "categories": [],
+    "contents": "\nDet var totalt 47 postere på konferansen og Sykdomspulsen fikk prisen med omtale “Sykdomspulsen - En spennende og fremtidsrettet infrastruktur og nettside for overvåkning av covid-19, andre infeksjoner og dødelighet i sanntid”.\nDenne prisen er utrolig viktig for oss som en liten påskjønnelse for alle de ekstra timene vi alle i Sykdomspulsen har jobbet gjennom pandemien. Vi setter veldig pris på den, sier seniorrådgiver Gry Marysol Grøneng ved Metodeutvikling og helseanalyse.\nVi er de første i FHI som har et helautomatisk system som tar inn data, analyserer data og leverer rapporter, tabeller, kart, i tillegg til å levere data til GitHub og APIer for nettsider og modelleringsgruppen samt drifter en interaktiv nettside. Alt dette gjøres på en sikker, skalerbar og høyteknologisk infrastruktur uten en eneste manuell prosess. Vi er i tillegg kun seks årsverk som jobber med alt fra endring og inklusjon av nye datakilder, drift av infrastruktur og nettside, forbedring og brukersupport, forteller Gry.\n\n\n\nPrisutdeling\n\n\nPrisbelønnet poster\n\n\n\nconference_poster.pdf\nPrisbelønnet handout\n\n\n\n\n\n\nconference_handout.pdf\nDatakilder\nI infrastrukturen tas det inn data fra mer enn 15 datakilder, de fleste oppdateres hver dag:\nMSIS\nMSIS labdatabasen\nSYSVAK\nNIPaR\nDÅR\nVaksinedistribusjon\nSymptometer\nModelleringsresultater\nKUHR (sKUHR)\nNorMOMO\nVeterinærinstituttet data\nSSB data\nMeteorologisk institutt data\nNordiske Covid-19 data\nTelenor data\nFlere andre\nAnalyser\nSykdomspulsen gjør over 500 000 analyser automatisk hver dag. Noen av disse analysene er tunge regresjonsanalyser, der det kjøres enkeltanalyser per aldersgruppe og per kommune. Det viktige med en del av disse analysene er å kunne lage resultater som sier noe om det er en økning av infeksjon i forhold til tidligere. Dette er viktig for å kunne gjøre tiltak i rett tid.\nLeveranser\nLeveransene spenner over en stor skala fra enkle grafer til store rapporter. Den eneste grunnen til at dette lar seg gjøre er den svært fleksible infrastrukturen (se under ‘Infrastruktur’ for mer informasjon).\nSykdomspulsen leverer hver dag:\nCovid-19 dagsrapporter før frokost (mer enn 500 stk hver dag)\nOppdatering av data til fhi.no\nOppdatering av data til Sykdomspulsen for kommunehelsetjenesten nettsiden\nOppdatering av data til modelleringsgruppa på FHI\nOppdatering av GitHub data (maskinlesbare data som for eksempel NTB, VG og BT bruker)\nTabeller med covid-19 vaksinasjoner til vaksinasjonsprogrammet\nUtregninger, tabeller, grafer og kart til faggruppen for influensa (brukes bla til influensa ukesrapport)\nSykdomspulsen for kommunehelsetjenesten - nettsiden\nVi drifter en interaktiv nettside fra A til Å: Sykdomspulsen har bygget opp det tekniske, gjør automatisk oppdatering av data hver dag, har stått for webdesign, grafer, tekst og gjør all brukersupport. Denne nettsiden er kun for kommuneleger, statsforvaltere, smittevernleger, RHF og FHI og har per nå om lag 350 brukere, med ca 100 personer som er innom nettsiden på daglig basis.\nInfrastruktur\nSykdomspulsens infrastruktur er unik ved at den kan håndtere så store mengder data hver dag på en rask og effektiv måte. Infrastrukturen leser over 2 000 000 000 rader data og resultater (1TB) på daglig basis, og 1000 database-tabeller. Infrastrukturen er basert på R som gjør at den er veldig fleksibel og kubernetes gjør at den er veldig robust og kan skaleres. I tillegg er infrastrukturen veldig sikker da det er tilgangskontroll på hele infrastrukturen og kryptering i alle ledd.\n\n\n\n",
+    "preview": "posts/2021-11-17-posterpris-til-sykdomspulsen/screenshot.png",
+    "last_modified": "2021-11-25T11:40:30+01:00",
+    "input_file": {},
+    "preview_width": 2044,
+    "preview_height": 2554
+  },
+  {
+    "path": "posts/2021-11-15-we-are-at-kvalitetsregister-konferanse/",
+    "title": "We are at Kvalitetsregister Konferanse Today/Tomorrow!",
+    "description": "Come chat to us in the poster presentation time slot",
+    "author": [
+      {
+        "name": "Calvin Chiang",
+        "url": {}
+      }
+    ],
+    "date": "2021-11-15",
+    "categories": [],
+    "contents": "\nWe are at the Kvalitetsregister Konferanse today and tomorrow!\nCome and say hi :)\nPoster presentations are tomorrow (16/11/21) from 10:45 to 11:30, and\nyou can find us at stand #23.\nIf you missed us, please see below a copy of the poster and\nhandout\nPoster\n\n\n\nconference_poster.pdf\nHandout\n\n\n\n\n\n\nconference_handout.pdf\n\n\n\n",
+    "preview": "posts/2021-11-15-we-are-at-kvalitetsregister-konferanse/poster.png",
+    "last_modified": "2022-07-14T12:36:30+02:00",
+    "input_file": {},
+    "preview_width": 1772,
+    "preview_height": 2484
+  },
+  {
+    "path": "posts/2021-11-11-welcome/",
+    "title": "Welcome to Sykdomspulsen",
+    "description": "Sykdomspulsen is a real time analysis and disease surveillance system designed\nand developed at the Norwegian Institute of Public Health (NIPH/FHI).",
+    "author": [
+      {
+        "name": "Richard Aubrey White",
+        "url": "https://rwhite.no"
+      }
+    ],
+    "date": "2021-11-11",
+    "categories": [],
+    "contents": "\nThis website has been designed with the purpose of documenting the\nSykdomspulsen project in such a way that anyone can duplicate our\ninfrastructure and run their own version of Sykdomspulsen.\n\n\n\n",
+    "preview": {},
+    "last_modified": "2022-07-14T12:19:21+02:00",
+    "input_file": {}
+  }
+]

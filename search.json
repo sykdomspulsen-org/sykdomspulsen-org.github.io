@@ -1,0 +1,92 @@
+{
+  "articles": [
+    {
+      "path": "about_contact.html",
+      "title": "Contact",
+      "description": "The Sykdomspulsen team welcomes comments and feedback about our work. We look forward to hearing from you!",
+      "author": [],
+      "contents": "\nAbout Sykdomspulsen\nFor more information about the Sykdomspulsen project you are welcome\nto read the official document here.\nNorwegian\nversion, English\nversion\nIf you have any questions, you are welcome to contact the team at sykdomspulsen@fhi.no.\nAbout R related topics\nFor more information about our R packages, splverse and our\ninfrastructure, you can either open a pull request in the GitHub\nrepositories, or send us an email.\nYou can find some of us on Twitter.\n\n\n\n",
+      "last_modified": "2022-07-27T09:21:36+02:00"
+    },
+    {
+      "path": "about_team.html",
+      "title": "Meet the team",
+      "description": "The Sykdomspulsen team is a group of talented people, working on interesting topics combining real-time public health surveillance with data science tools. ",
+      "author": [],
+      "contents": "\nCurrent\nBeatriz Valcarcel Salamanca completed her PhD in\nStatistical Genetics in the Department of Epidemiology and Biostatistics\nat Imperial College London. Prior to her PhD, she completed an MSc in\nBioinformatics with Systems Biology by Birkbeck College, University of\nLondon. In October 2014, she began working as a researcher at FHI in\nprojects related to vaccine-preventable diseases. She is currently\nworking on the surveillance of infectious respiratory diseases.\nCalvin Chiang is a experienced engineer with 10\nyears of industry experience. Calvin is working on the IT\ninfrastructure.\nCeline Victoria Berg-Hansen completed her bachelor’s\ndegree in Computer Science: Language Technology at the University of\nOslo in 2021. She now works full-time in the Sykdomspulsen team as a\ndeveloper.\nChi Zhang has submitted her PhD thesis on hospital\nElectronic Health Records representation and utilization at the\nUniversity of Oslo. She has a MSc in Statistics from Imperial College\nLondon. Since Chi joined FHI in 2020, she has been working on the\nR-packages splverse that are key to the Sykdomspulsen infrastructure.\nChi is responsible for NorMOMO (excess mortality surveillance in\nNorway). You can find Chi on Twitter\nClémence Koren completed her MSc in Biology at UiT\nThe Arctic University of Norway in 2018. She started working at FHI in\n2020 on the One Health surveillance of Campylobacter-related\ngastrointestinal infections. She has been working part-time in\nSykdomspulsen on visual design and front-end development.\nGry Marysol Grøneng is the project leader of\nSykdomspulsen. She is a veterinarian with a PhD in Epidemiology. She has\nworked with surveillance of infectious diseases since 2015.\nJonas Christoffer Lindstrøm is a statistician\nworking part-time at Sykdomspulsen. He collaborates with the modelling\nteam at FHI, and works on the spldata package.\nMiriam Vatshelle completed her bachelor’s degree in\nnursing at VID Specialized University in Bergen. She has several years\nof experience working in the municipal health care services and worked\nin the frontline of the Covid-19 pandemic, until she started working at\nFHI in January 2022. She now works full-time at Sykdomspulsen team as an\nadvisor.\nRichard Aubrey White completed his PhD in\nBiostatistics at Harvard University. He has previously worked on\noutbreaks/surveillance projects in Sierra Leone (Ebola), Mozambique\n(cholera), and Palestine (maternal health). He now works primarily on\nthe infrastructure Sykdomspulsen Core and the R-package plnr.\nPrevious\nAurora Christine Hofman completed her MSc in\nStatistics at the Norwegian University of Science and Technology (NTNU).\nFrom 2020 to 2022 she worked on a collaboration project with the\nNorwegian Cause of Death Registry (Dødsårsaksregisteret) to create\nsurveillance models for cause-specific mortality and was a part of the\nteam who created the R-package attrib.\nDavid Swanson completed his PhD in Biostatistics at\nHarvard University. He is a statistician with research interests and\nexperience in mixed models, smoothing, survival analysis, genomics, and\nepidemiology. During 2021 he worked on the Sykdomspulsen research team\nwith a focus on campylobacter modelling and surveillance/prediction of\ngastroenteritis. He also had a joint position in the Department of\nBiostatistics, University of Oslo and Oslo University Hospital.\nGunnar Øyvind Isaksson Rø is a\nphysicist/epidemiologist with research interests in infectious disease\nmodelling. From 2019 to 2020 he worked on the Sykdomspulsen primary team\nwith a focus on influenza surveillance. His significant contributions to\nSykdomspulsen Core were 1) proposing to use databases as a seamless\nbackend, and 2) creating the first “task_to_config” function (and\nconcept).\n\n\n\n",
+      "last_modified": "2022-07-27T09:21:36+02:00"
+    },
+    {
+      "path": "blog.html",
+      "title": "Blog",
+      "author": [],
+      "contents": "\n\n\n\n",
+      "last_modified": "2022-07-27T09:21:37+02:00"
+    },
+    {
+      "path": "index.html",
+      "title": "Sykdomspulsen",
+      "description": "Sykdomspulsen is a real-time analysis and disease surveillance system designed and developed at the Norwegian Institute of Public Health (NIPH/FHI).\n",
+      "author": [],
+      "contents": "\nWhat is Sykdomspulsen\nSykdomspulsen is a unique project that processes new data\n(e.g. covid-19 cases) shortly after it is available. Complex statistical\nanalyses are automatically run for all locations in Norway, producing\nreports and alerting various stakeholders.\nThis provides the health authorities the ability to make proactive\nstrategic decisions with the most up-to-date information.\nAnalyses delivered in\nnear real-time\n«Data» is not useful by itself. Data must be cleaned, analysed, and\nthe results delivered to stakeholders.\nAn effective outbreak response requires this in near real-time.\nSykdomspulsen’s goal is to achieve this.\nQuick stats\nWe receive data from more than 15 data sources every day\n2 000 000 000+ rows of data and results (1TB)\n1000+ database tables\n1 000 000+ analyses per day\n1 000+ automatic reports per day\nData flow in Sykdomspulsen\n\nSykdomspulsen Core\nSykdomspulsen Core is the free and\nopen-source backbone of Sykdomspulsen.\nSykdomspulsen Core is a standalone R package, which means it is easy\nfor other teams to build up their own surveillance infrastructure based\non Sykdomspulsen Core.\nsplverse\nsplverse is a number of R packages that have\nbeen developed by the Sykdomspulsen team to help with infectious\ndiseases surveillance.\n\n\n\n",
+      "last_modified": "2022-07-27T09:21:37+02:00"
+    },
+    {
+      "path": "learn_methods.html",
+      "title": "Statistical methods",
+      "description": "Software publications that are related to Sykdomspulsen.",
+      "author": [],
+      "contents": "\nSoftware\nSoftware\n\n\n\n",
+      "last_modified": "2022-07-27T09:21:38+02:00"
+    },
+    {
+      "path": "learning.html",
+      "title": "Courses",
+      "description": "Courses under development related to infectious disease surveillance.",
+      "author": [],
+      "contents": "\n\n\n\nWhich Stats Method? provides a\nbasic overview of general statistical methodology that can be useful in\nthe areas of infectious diseases, environmental medicine, and labwork.\nBy the end of this course, students will be able to identify appropriate\nstatistical methods for a variety of circumstances.\nThis course will not teach students how to implement these\nstatistical methods. The aim of this course is to enable the student to\nidentify which methods are required for their study, allowing the\nstudent to identify their needs for subsequent methods courses,\nself-learning, or external help.\n\n\n\nLongitudinal\nAnalysis for Surveillance teaches students to run “normal\nregressions” in situations where the data structure would ordinarily\nprohibit you from running regression models. These situations mostly\npertain to clusters of correlated data.\nWhen dealing with longitudinal data, there are two kinds of analyses\nthat can be performed:\n“Time series” analyses generally deal with one variable. The aim is\nto then predict the future only using the previous observations. A\ncommon example would be to predict tomorrow’s temperature, using today’s\nand yesterday’s temperature as exposures. We will not be\nfocusing on these kinds of analyses in this course.\n“Regression analyses” are very similar to ordinary regressions that\nyou have been working with for many years. The only difference is that\nthey have more advanced data structures that your current methods cannot\nhandle. For example, if you want to see how the number of tuberculosis\npatients (outcome) is affected by the number of immigrants to Norway\n(exposure) over a 20 year period, then the number of patients in each\nyear might be associated with each other, which might break assumptions\nof the regression models that you normally use (independent residuals).\nTo account for the advanced structure of the data (correlation between\ndifferent years) we will use more advanced regression techniques.\nThis will be the focus of the course.\n\n\n\n",
+      "last_modified": "2022-07-27T09:21:38+02:00"
+    },
+    {
+      "path": "packages.html",
+      "title": "Packages / splverse",
+      "description": "A set of R packages developed to help solve problems that frequently occur when performing infectious disease surveillance.\nThe splverse has been created by the Sykdomspulsen team (specialized in infectious disease surveillance), who use it every \nday to streamline and improve their pipelines and deliverables. The splverse has been used and improved throughout the COVID-19 pandemic, forming the basis of all of Sykdomspulsen's products. To put it more succinctly: \"All genuine knowledge originates in direct experience.\"\n",
+      "author": [],
+      "contents": "\n\n\n\nInstallation and Use\n\n\n\nIf you want to install the dev versions (or access packages that\nhaven’t been released on CRAN), run\nusethis::edit_r_profile() to edit your\n.Rprofile.\nThen write in:\noptions(\n  repos = structure(c(\n    SPLVERSE  = \"https://docs.sykdomspulsen.no/drat/\",\n    CRAN      = \"https://cran.rstudio.com\"\n  ))\n)\nSave the file and restart R.\nYou can now install splverse packages from\nour drat\nrepository.\nThe splverse\n\n\n\nattrib is designed to make the process of\ncalculating attributable mortalities and incident risk ratios efficient\nand easy.\nGo to docs…\n\n\n\nnowcast helps you predict the present.\nGo to docs…\n\n\n\norg is a system to help you organize\nprojects.\nGo to docs…\n\n\n\nplnr is a system to help you plan analyses.\nGo to docs…\n\n\n\nsplalert helps create alerts from public\nhealth surveillance data.\nGo to docs…\n\n\n\nspldata contains preformatted structural data\nfor Norway.\nGo to docs…\n\n\n\nsplmaps contains preformatted maps of Norway\nthat generally don’t need geolibraries.\nGo to docs…\n\n\n\nsplshiny contains helpful functions for\ncreating Shiny websites.\nGo to docs…\n\n\n\nsplstyle contains helpful functions for\ncreating outputs in the style(s) used by FHI and Sykdomspulsen.\nGo to docs…\n\n\n\nspltidy contains helpful functions for\ncleaning data.\nGo to docs…\n\n\n\nspltime contains helpful functions for\nworking with time.\nGo to docs…\n\n\n\nsplutil contains helpful functions to help\nwith common base R problems.\nGo to docs…\n\n\n\nspread contains different infectious disease\nspread models.\nGo to docs…\n\n\n\n",
+      "last_modified": "2022-07-27T09:21:39+02:00"
+    },
+    {
+      "path": "publication_books.html",
+      "title": "Books",
+      "description": "Books under development",
+      "author": [],
+      "contents": "\n\n\n\nReal-Time Surveillance of\nInfectious Diseases: A Statistical Perspective is a book\ncurrently under early development.\n\n\n\n",
+      "last_modified": "2022-07-27T09:21:40+02:00"
+    },
+    {
+      "path": "publication_talks.html",
+      "title": "Presentations",
+      "description": "Talks and conference presentations related to Sykdomspulsen.",
+      "author": [],
+      "contents": "\nConferences\n\n\nChiang, C. (2021). “Sykdomspulsen - En spennende og fremtidsrettet\ninfrastruktur og nettside for overvåkning av covid-19, andre infeksjoner\nog dødelighet i sanntid”. In: Helse- og\nkvalitetsregisterkonferansen. URL:\nhttps://docs.sykdomspulsen.no/posts/2021-11-17-posterpris-til-sykdomspulsen/conference_poster.pdf.\n\n\nKoren, C. et al. (2021). “Sykdomspulsen One Health - A real time\nsurveillance system in an infrastructure coping with half a million\nanalysis a day”. In: ARPHA Conference Abstracts 4. DOI:\n10.3897/aca.4.e68891.\n\n\nR meetings\n“Real-time public health surveillance with Sykdomspulsen” at Oslo R\nUsers Meetup. Presented by Chi Zhang, 2022-06-16. Link.\nSeminar talks\n“Introducing fhi::sykdomspulsen, a real-time public health\nsurveillance platform” at Oslo Center for Biostatistics and\nEpidemiology, University of Oslo. Presented by Chi Zhang, 2021-10-26.\nPresentation link incoming.\n\n\n\n",
+      "last_modified": "2022-07-27T09:21:40+02:00"
+    },
+    {
+      "path": "publication_tutorials.html",
+      "title": "Tutorials",
+      "description": "Tutorials on some of the tasks Sykdomspulsen works on.",
+      "author": [],
+      "contents": "\nAutoreport 101\nIn this tutorial we introduce how to make a basic automated report\nusing Rmarkdown and MS office. Link\n\n\n\n",
+      "last_modified": "2022-07-27T09:21:41+02:00"
+    },
+    {
+      "path": "publications.html",
+      "title": "Publications",
+      "description": "Publications that are related to Sykdomspulsen.",
+      "author": [],
+      "contents": "\nPublications\nabout the Sykdomspulsen system/infrastructure\n\n\nWhite, R. A. et al. (2021). attrib: Attributable Burden of\nDisease. R package version 2021.9.20. URL:\nhttps://github.com/folkehelseinstituttet/attrib.\n\n\nPublications\nthat include data and/or results from the Sykdomspulsen implementation\nat FHI\n\n\nArnesen, T. M. et al. (2021). Tuberkulose i Norge 2019 og 2020\n- med behandlingsresultater for 2018 og 2019. Norwegian Institute\nof Public Health. URL:\nhttps://www.fhi.no/globalassets/dokumenterfiler/rapporter/2021/arsrapport-2019-og-2020_.pdf.\n\n\nBragstad, K. et al. (2021). Norway National Influenza Centre:\nInfluenza Virological and Epidemiological season report prepared for the\nWHO Consultation on the Composition of Influenza Virus Vaccines for the\nSouthern Hemisphere 2022. Norwegian Institute of Public Health.\nURL:\nhttps://fhi.brage.unit.no/fhi-xmlui/bitstream/handle/11250/2829239/Bragstad-2021-Inf.pdf.\n\n\nEngebretsen, S. et al. (2021). “Regional probabilistic situational\nawareness and forecasting of COVID-19”. In: medRxiv. DOI:\n10.1101/2021.10.25.21265166.\n\n\nHerrador, B. G. et al. (2021). “Heavy weather events, water\nquality and gastroenteritis in Norway”. In: One Health 13,\np. 100297. DOI:\n10.1016/j.onehlt.2021.100297.\n\n\nInfluenza-Department (2021). Influenza season in Norway\n2020-21. Norwegian Institute of Public Health. URL:\nhttps://www.fhi.no/globalassets/dokumenterfiler/influensa/influensaovervaking/influensasesongen-i-norge-2020-21.pdf.\n\n\nVestergaard, L. S. et al. (2020). “Excess all-cause mortality\nduring the COVID-19 pandemic in Europe - preliminary pooled estimates\nfrom the EuroMOMO network, March to April 2020”. In:\nEurosurveillance 25.26. DOI:\n10.2807/1560-7917.es.2020.25.26.2001214.\n\n\nAmato, E. et al. (2019). “Increase of scabies infestations,\nNorway, 2006 to 2018”. In: Eurosurveillance 24.23. DOI:\nhttps://doi.org/10.2807/1560-7917.ES.2019.24.23.190020.\n\n\nArnesen, T. M. et al. (2019). Tuberkulose i Norge 2018 - med\nbehandlingsresultater for 2017. Norwegian Institute of Public\nHealth. URL:\nhttps://www.fhi.no/contentassets/fd3260fd299f4ad3ba074c049deb1ae9/tuberkulose-arsrapport-2019-til-publisering.pdf.\n\n\nBenedetti, G. et al. (2019). “Identifying exceptional malaria\noccurrences in the absence of historical data in South Sudan: a method\nvalidation”. In: Public Health Action 9.3, pp. 90–95. DOI:\n10.5588/pha.19.0002.\n\n\nNielsen, J. et al. (2019). “European all-cause excess and\ninfluenza-attributable mortality in the 2017/18 season: should the\nburden of influenza B be reconsidered?” In: Clinical Microbiology\nand Infection 25.10, pp. 1266–1276. DOI:\n10.1016/j.cmi.2019.02.011.\n\n\nArnesen, T. M. et al. (2018). Tuberkulose i Norge 2017 - med\nbehandlingsresultater for 2016. Norwegian Institute of Public\nHealth. URL:\nhttps://www.fhi.no/globalassets/dokumenterfiler/rapporter/2018/arsrapport-tuberkulose-i-norge-2017-.pdf.\n\n\nWisløff, T. et al. (2018). “Feasibility of reaching world health\norganization targets for hepatitis C and the cost-effectiveness of\nalternative strategies”. In: Journal of Viral Hepatitis 25.9,\npp. 1066–1077. DOI:\n10.1111/jvh.12904.\n\n\nWisløff, T. et al. (2018). “Economic Evaluation of Direct-Acting\nAntivirals for Hepatitis C in Norway”. In: PharmacoEconomics\n36.5, pp. 591–601. DOI:\n10.1007/s40273-017-0604-3.\n\n\nArnesen, T. M. et al. (2017). Tuberkulose i Norge 2016 - med\nbehandlingsresultater for 2015. Arsrapport. Delrapport 5 av Smittesomme\nsykdommer i Norge 2016. Norwegian Institute of Public Health. URL:\nhttps://www.fhi.no/globalassets/dokumenterfiler/rapporter/2015/tuberkulose-i-norge-i-2016—med-behandlingsresultater-for-2015.pdf.\n\n\nMeijerink, H. et al. (2017). “Modelling the burden of hepatitis C\ninfection among people who inject drugs in Norway, 1973-2030”. In:\nBMC Infectious Diseases 17.1. DOI:\n10.1186/s12879-017-2631-2.\n\n\nVestergaard, L. S. et al. (2017). “Excess all-cause and\ninfluenza-attributable mortality in Europe, December 2016 to February\n2017”. In: Eurosurveillance 22.14. DOI:\n10.2807/1560-7917.es.2017.22.14.30506.\n\n\nWhite, R. A. et al. (2014). “Projected Treatment Capacity Needs in\nSierra Leone”. In: PLoS Currents. DOI:\n10.1371/currents.outbreaks.3c3477556808e44cf41d2511b21dc29f.\n\n\n\n\n\n",
+      "last_modified": "2022-07-27T09:21:42+02:00"
+    }
+  ],
+  "collections": ["posts/posts.json"]
+}

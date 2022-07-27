@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>Sykdomspulsen</title>
+    <link>https://docs.sykdomspulsen.no</link>
+    <atom:link href="https://docs.sykdomspulsen.no/blog.xml" rel="self" type="application/rss+xml"/>
+    <description>Sykdomspulsen is a real-time analysis and disease surveillance system designed and developed at the Norwegian Institute of Public Health (NIPH/FHI).
+</description>
+    <image>
+      <title>Sykdomspulsen</title>
+      <url>https://docs.sykdomspulsen.no/images/favicon.ico</url>
+      <link>https://docs.sykdomspulsen.no</link>
+    </image>
+    <generator>Distill</generator>
+    <lastBuildDate>Wed, 27 Jul 2022 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Auto-Updating Docker-Compose Images (Using Podman)</title>
+      <dc:creator>Richard Aubrey White</dc:creator>
+      <link>https://docs.sykdomspulsen.no/posts/2022-07-27-auto-updating-docker-compose-images</link>
+      <description>Through some simple python coding and systemd services, we have successfully created an automatic update mechanism for Docker-Compose with a Podman backend.</description>
+      <guid>https://docs.sykdomspulsen.no/posts/2022-07-27-auto-updating-docker-compose-images</guid>
+      <pubDate>Wed, 27 Jul 2022 00:00:00 +0000</pubDate>
+      <media:content url="https://docs.sykdomspulsen.no/posts/2022-07-27-auto-updating-docker-compose-images/build_1.png" medium="image" type="image/png" width="1474" height="639"/>
+    </item>
+    <item>
+      <title>R-Package "org" (version 2022.7.20) Published on CRAN</title>
+      <dc:creator>Richard Aubrey White</dc:creator>
+      <link>https://docs.sykdomspulsen.no/posts/2022-07-21-org-version-2022-7-20-published-on-cran</link>
+      <description>"org" is a system to help you organize projects. Most analyses have three (or more) main sections: code, results, and data, each with different requirements (version control/sharing/encryption). You provide folder locations and 'org' helps you take care of the details.</description>
+      <guid>https://docs.sykdomspulsen.no/posts/2022-07-21-org-version-2022-7-20-published-on-cran</guid>
+      <pubDate>Thu, 21 Jul 2022 00:00:00 +0000</pubDate>
+      <media:content url="https://docs.sykdomspulsen.no/posts/2022-07-21-org-version-2022-7-20-published-on-cran/org.png" medium="image" type="image/png" width="1310" height="1517"/>
+    </item>
+    <item>
+      <title>Custom Airflow Docker Operator (Poor-Man's Kubernetes)</title>
+      <dc:creator>Richard Aubrey White</dc:creator>
+      <link>https://docs.sykdomspulsen.no/posts/2022-07-18-custom-airflow-docker-operator</link>
+      <description>Airflow is a platform to programmatically author, schedule, and monitor workflows data. Operators are the main building blocks that encapsulate logic to do a unit of work. We have created a custom Airflow operator that 1) checks a remote YAML file and 2) then takes a decision to do one of two actions. This allows us to create a "poor-man's Kubernetes".</description>
+      <guid>https://docs.sykdomspulsen.no/posts/2022-07-18-custom-airflow-docker-operator</guid>
+      <pubDate>Mon, 18 Jul 2022 00:00:00 +0000</pubDate>
+      <media:content url="https://docs.sykdomspulsen.no/posts/2022-07-18-custom-airflow-docker-operator/airflow.png" medium="image" type="image/png" width="1897" height="753"/>
+    </item>
+    <item>
+      <title>Tidyverse principles at Sykdomspulsen</title>
+      <dc:creator>Chi Zhang</dc:creator>
+      <link>https://docs.sykdomspulsen.no/posts/2022-07-14-tidyverse</link>
+      <description>At Sykdomspulsen we adopt the Tidyverse principles.</description>
+      <guid>https://docs.sykdomspulsen.no/posts/2022-07-14-tidyverse</guid>
+      <pubDate>Thu, 14 Jul 2022 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>From data to reports: real-time surveillance with splverse</title>
+      <dc:creator>Chi Zhang</dc:creator>
+      <link>https://docs.sykdomspulsen.no/posts/2022-07-12-splverse</link>
+      <description>In this post we demonstrate how we use splverse to carry out real-time public health surveillance.</description>
+      <guid>https://docs.sykdomspulsen.no/posts/2022-07-12-splverse</guid>
+      <pubDate>Tue, 12 Jul 2022 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Automated reporting in real-time public health surveillance</title>
+      <dc:creator>Chi Zhang</dc:creator>
+      <link>https://docs.sykdomspulsen.no/posts/2022-07-13-automation</link>
+      <description>In this post we introduce how Sykdomspulsen uses automated reports to carry out surveillance tasks.</description>
+      <guid>https://docs.sykdomspulsen.no/posts/2022-07-13-automation</guid>
+      <pubDate>Tue, 12 Jul 2022 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>R-Package "plnr" (version 2022.6.8) Published on CRAN</title>
+      <dc:creator>Richard Aubrey White</dc:creator>
+      <link>https://docs.sykdomspulsen.no/posts/2022-06-08-plnr-version-2022-6-8-published-on-cran</link>
+      <description>"plnr" is a system to plan analyses within the mental model where you have one (or more) datasets and want to run either A) the same function multiple times with different arguments, or B) multiple functions. This is appropriate when you have multiple strata (e.g. locations, age groups) that you want to apply the same function to, or you have multiple variables (e.g. exposures) that you want to apply the same statistical method to, or when you are creating the output for a report and you need multiple different tables or graphs.</description>
+      <guid>https://docs.sykdomspulsen.no/posts/2022-06-08-plnr-version-2022-6-8-published-on-cran</guid>
+      <pubDate>Wed, 08 Jun 2022 00:00:00 +0000</pubDate>
+      <media:content url="https://docs.sykdomspulsen.no/posts/2022-06-08-plnr-version-2022-6-8-published-on-cran/plnr.png" medium="image" type="image/png" width="1310" height="1517"/>
+    </item>
+    <item>
+      <title>New Course: Longitudinal Analysis for Surveillance</title>
+      <dc:creator>Richard Aubrey White</dc:creator>
+      <link>https://docs.sykdomspulsen.no/posts/2022-01-24-new-course-longitudinal-analysis-for-surveillance</link>
+      <description>Sykdomspulsen has published a short course that teaches students to run "normal regressions" in situations where the data structure would ordinarily prohibit you from running regression models. These situations mostly pertain to clusters of correlated data.</description>
+      <guid>https://docs.sykdomspulsen.no/posts/2022-01-24-new-course-longitudinal-analysis-for-surveillance</guid>
+      <pubDate>Mon, 24 Jan 2022 00:00:00 +0000</pubDate>
+      <media:content url="https://docs.sykdomspulsen.no/posts/2022-01-24-new-course-longitudinal-analysis-for-surveillance/longitudinal-analysis-for-surveillance.png" medium="image" type="image/png" width="2475" height="3300"/>
+    </item>
+    <item>
+      <title>New Course: Which Stats Method?</title>
+      <dc:creator>Richard Aubrey White</dc:creator>
+      <link>https://docs.sykdomspulsen.no/posts/2022-01-11-new-course-which-stats-method</link>
+      <description>Sykdomspulsen has published a short course that provides a basic overview of general statistical methodology that can be useful in the areas of infectious diseases, environmental medicine, and labwork. By the end of this course, students will be able to identify appropriate statistical methods for a variety of circumstances.</description>
+      <guid>https://docs.sykdomspulsen.no/posts/2022-01-11-new-course-which-stats-method</guid>
+      <pubDate>Tue, 11 Jan 2022 00:00:00 +0000</pubDate>
+      <media:content url="https://docs.sykdomspulsen.no/posts/2022-01-11-new-course-which-stats-method/reference.png" medium="image" type="image/png" width="1344" height="1344"/>
+    </item>
+    <item>
+      <title>Sykdomspulsen Receives Prize for Best Poster</title>
+      <dc:creator>Gry Marysol Grøneng</dc:creator>
+      <link>https://docs.sykdomspulsen.no/posts/2021-11-18-poster-prize-for-sykdomspulsen</link>
+      <description>Sykdomspulsen received the prize for best poster at Helse- og Kvalitetsregisterkonferansen 2021.</description>
+      <guid>https://docs.sykdomspulsen.no/posts/2021-11-18-poster-prize-for-sykdomspulsen</guid>
+      <pubDate>Thu, 18 Nov 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://docs.sykdomspulsen.no/posts/2021-11-18-poster-prize-for-sykdomspulsen/screenshot.png" medium="image" type="image/png" width="2044" height="2554"/>
+    </item>
+    <item>
+      <title>Posterpris til Sykdomspulsen</title>
+      <dc:creator>Gry Marysol Grøneng</dc:creator>
+      <link>https://docs.sykdomspulsen.no/posts/2021-11-17-posterpris-til-sykdomspulsen</link>
+      <description>Sykdomspulsen fikk posterpris på Helse- og Kvalitetsregisterkonferansen 2021.</description>
+      <guid>https://docs.sykdomspulsen.no/posts/2021-11-17-posterpris-til-sykdomspulsen</guid>
+      <pubDate>Wed, 17 Nov 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://docs.sykdomspulsen.no/posts/2021-11-17-posterpris-til-sykdomspulsen/screenshot.png" medium="image" type="image/png" width="2044" height="2554"/>
+    </item>
+    <item>
+      <title>We are at Kvalitetsregister Konferanse Today/Tomorrow!</title>
+      <dc:creator>Calvin Chiang</dc:creator>
+      <link>https://docs.sykdomspulsen.no/posts/2021-11-15-we-are-at-kvalitetsregister-konferanse</link>
+      <description>Come chat to us in the poster presentation time slot</description>
+      <guid>https://docs.sykdomspulsen.no/posts/2021-11-15-we-are-at-kvalitetsregister-konferanse</guid>
+      <pubDate>Mon, 15 Nov 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://docs.sykdomspulsen.no/posts/2021-11-15-we-are-at-kvalitetsregister-konferanse/poster.png" medium="image" type="image/png" width="1772" height="2484"/>
+    </item>
+    <item>
+      <title>Welcome to Sykdomspulsen</title>
+      <dc:creator>Richard Aubrey White</dc:creator>
+      <link>https://docs.sykdomspulsen.no/posts/2021-11-11-welcome</link>
+      <description>Sykdomspulsen is a real time analysis and disease surveillance system designed
+and developed at the Norwegian Institute of Public Health (NIPH/FHI).</description>
+      <guid>https://docs.sykdomspulsen.no/posts/2021-11-11-welcome</guid>
+      <pubDate>Thu, 11 Nov 2021 00:00:00 +0000</pubDate>
+    </item>
+  </channel>
+</rss>
